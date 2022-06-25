@@ -14,7 +14,7 @@ function initOciliator(remove) {
 
         settings.debug = false;
         settings.friction = 0.5;
-        settings.trails = 30;
+        settings.trails = 330;
         settings.size = 50;
         settings.dampening = 0.25;
         settings.tension = 0.98;
