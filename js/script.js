@@ -16,8 +16,31 @@ document.querySelector('.switch').addEventListener('click', darkMode);
 
 
 
+/* ----------------------------------------------- Web App Toggle ----------------------------------------------- */
+function changeActiveWebApp() {
+    let toggles = document.querySelectorAll('.webApp-toggle')
+    toggles.forEach(element => {
+        element.classList.remove('active')
+    })
+    event.target.parentNode.classList.add('active')
+    let arr = Array.from(toggles)
+    let appIndex = arr.indexOf(event.target.parentNode)
 
+    let image = document.querySelectorAll('.webApp-content')
+    image.forEach(element => {
+        element.classList.remove('active')
+    })
+    image[appIndex].classList.add('active')
 
+}
+
+function webAppToggle() {
+    let toggles = document.querySelectorAll('.webApp-toggle')
+    toggles.forEach(element => {
+        element.addEventListener('click', changeActiveWebApp)
+    })
+}
+webAppToggle()
 
 
 
