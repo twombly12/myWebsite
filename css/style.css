@@ -131,6 +131,7 @@
     
     * {
         box-sizing: border-box;
+        position: relative;
     }
     /* ------------------------------------------------- Fonts ------------------------------------------------- */
     
@@ -145,6 +146,80 @@
         color: #FFF;
         font-weight: 700;
         letter-spacing: -4px;
+    }
+    
+    h2 {
+        font-size: 4.8rem;
+        color: #000;
+        font-weight: 700;
+        letter-spacing: -4px;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+    
+    h3 {
+        font-size: 2.4rem;
+        color: #000;
+        font-weight: 700;
+        line-height: 1.6;
+    }
+    
+    p {
+        font-size: 2rem;
+        line-height: 1.6;
+    }
+    
+    h2+p {
+        width: 660px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .center-text {
+        text-align: center;
+    }
+    
+    .dark-color-text {
+        color: navy;
+    }
+    
+    .light-color-text {
+        color: cyan;
+    }
+    
+    .text-underline {
+        position: relative;
+        width: max-content;
+        margin-bottom: 80px;
+    }
+    
+    .text-underline::after,
+    .text-underline::before {
+        content: '';
+        position: absolute;
+        width: 30%;
+        height: 1px;
+        bottom: -40px;
+        border-bottom: 1px dashed navy;
+    }
+    
+    .text-underline::before {
+        left: 0;
+    }
+    
+    .text-underline::after {
+        right: 0;
+    }
+    /* ------------------------------------------------- General Spacing ------------------------------------------------- */
+    
+    .section {
+        width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section.top {
+        margin-top: 6%;
     }
     /* ------------------------------------------------- Button ------------------------------------------------- */
     
@@ -331,9 +406,11 @@
         position: relative;
         display: flex;
         align-items: center;
+        /* clip-path: ellipse(85% 55% at 50% 44%); */
+        clip-path: polygon(-1px -1px, 100% -1px, 100% 90%, 50% 100%, -1px 90%);
+        /* clip-path: polygon(-1px -1px, 100% -1px, 100% 80%, 0 100%); */
     }
-    
-    .landing::after {
+    /* .landing::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -347,11 +424,9 @@
         -webkit-transform: scaleX(-1);
         -ms-transform: scaleX(-1);
         transform: scaleX(-1);
-    }
+    } */
     
     .content {
-        width: 1200px;
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -377,6 +452,113 @@
     .landing .button {
         margin-top: 40px;
         margin-left: 6px;
+    }
+    /* ------------------------------------------------- About ------------------------------------------------- */
+    
+    #about>div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 40px;
+        margin-top: 80px;
+    }
+    
+    #about>div>div {
+        border: 1px solid rgb(0 0 0 / 0.1);
+        padding: 30px;
+        text-align: center;
+    }
+    /* ------------------------------------------------- Websites ------------------------------------------------- */
+    
+    #websites>div {
+        display: flex;
+        flex-wrap: wrap;
+        grid-gap: 30px;
+        margin-top: 80px;
+    }
+    
+    #websites>div>div {
+        position: relative;
+        flex: 0 0 calc(50% - 15px);
+        height: 300px;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    
+    #websites>div>div:last-child {
+        flex: 0 0 100%;
+    }
+    
+    #websites>div>div img {
+        width: 100%;
+        object-fit: fill;
+        z-index: -1;
+    }
+    
+    #websites>div>div span {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: max-content;
+        padding: 10px 40px;
+        background: navy;
+        color: #FFF;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    
+    #websites>div>div:nth-child(even) span {
+        right: 0;
+        border-radius: 10px 0 0 0;
+    }
+    
+    #websites>div>div:nth-child(odd) span {
+        left: 0;
+        border-radius: 0 10px 0 0;
+    }
+    
+    #websites>div>div>div {
+        opacity: 0%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-align: center;
+        background: navy;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10%;
+        transition: 0.3s ease all;
+    }
+    
+    #websites>div>div>div:hover {
+        opacity: 1;
+    }
+    
+    #websites>div>div>div a {
+        display: block;
+    }
+    
+    .circle-graphic {
+        position: absolute;
+        z-index: 99;
+        background: #FFF;
+        border-radius: 100px;
+        width: 100px;
+        height: 100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    .circle-graphic:first-child {
+        top: calc(300px - 35px);
+    }
+    
+    .circle-graphic:nth-child(2) {
+        top: calc(600px - 10px);
     }
     /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
     
