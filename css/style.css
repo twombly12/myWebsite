@@ -407,13 +407,14 @@
         display: flex;
         align-items: center;
         /* clip-path: ellipse(85% 55% at 50% 44%); */
-        clip-path: polygon(-1px -1px, 100% -1px, 100% 90%, 50% 100%, -1px 90%);
+        /* clip-path: polygon(-1px -1px, 100% -1px, 100% 90%, 50% 100%, -1px 90%); */
         /* clip-path: polygon(-1px -1px, 100% -1px, 100% 80%, 0 100%); */
     }
-    /* .landing::after {
+    
+    .landing::after {
         content: "";
         position: absolute;
-        bottom: 0;
+        bottom: -2px;
         left: 0;
         height: 100%;
         width: 100%;
@@ -424,7 +425,7 @@
         -webkit-transform: scaleX(-1);
         -ms-transform: scaleX(-1);
         transform: scaleX(-1);
-    } */
+    }
     
     .content {
         display: flex;
@@ -459,7 +460,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 40px;
-        margin-top: 80px;
+        margin-top: 40px;
     }
     
     #about>div>div {
@@ -556,10 +557,9 @@
     .circle-graphic:first-child {
         top: calc(300px - 35px);
     }
-    
-    .circle-graphic:nth-child(2) {
+    /* .circle-graphic:nth-child(2) {
         top: calc(600px - 10px);
-    }
+    } */
     /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
     
     .day {
