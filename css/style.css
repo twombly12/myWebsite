@@ -141,7 +141,6 @@
     }
     
     h1 {
-        margin-top: -10%;
         font-size: 8.8rem;
         color: #FFF;
         font-weight: 700;
@@ -188,11 +187,11 @@
     }
     
     .dark-color-text {
-        color: navy;
+        color: rgb(0 0 0 / 1.0);
     }
     
     .light-color-text {
-        color: cyan;
+        color: #a880ff;
     }
     
     .text-underline {
@@ -208,7 +207,7 @@
         width: 30%;
         height: 1px;
         bottom: -40px;
-        border-bottom: 1px dashed navy;
+        border-bottom: 1px dashed rgb(0 0 0 / 1.0);
     }
     
     .text-underline::before {
@@ -226,14 +225,14 @@
     }
     
     .section.top {
-        margin-top: 6%;
+        margin-top: 8%;
     }
     /* ------------------------------------------------- Button ------------------------------------------------- */
     
     .button {
         text-transform: uppercase;
-        background: cyan;
-        color: navy;
+        background: rgb(0 0 0 / 1.0);
+        color: #FFF;
         font-size: 1.6rem;
         font-weight: 600;
         letter-spacing: 2px;
@@ -246,48 +245,47 @@
         transition: 0.3s ease all;
     }
     
-    .button::before {
-        content: '';
-        width: 30px;
-        height: 30px;
-        border-top: 2px solid cyan;
-        border-left: 2px solid cyan;
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        -webkit-transition: .2s ease;
-        -o-transition: .2s ease;
-        transition: .2s ease;
-    }
-    
+    .button::before,
     .button::after {
         content: '';
         width: 30px;
-        height: 30px;
-        border-bottom: 2px solid cyan;
-        border-right: 2px solid cyan;
+        height: 28px;
         position: absolute;
-        bottom: -5px;
-        right: -5px;
         -webkit-transition: .2s ease;
         -o-transition: .2s ease;
         transition: .2s ease;
+        border: 2px solid rgb(0 0 0 / 1.0);
+    }
+    
+    .button::before {
+        border-bottom: none;
+        border-right: none;
+        top: -5px;
+        left: -5px;
+    }
+    
+    .button::after {
+        border-top: none;
+        border-left: none;
+        bottom: -5px;
+        right: -5px;
     }
     
     .button:hover::before,
     .button:hover::after {
         width: 90%;
         height: 90%;
+        border-color: #FFF;
     }
     
-    .button.navy {
-        background: navy;
+    .button.color {
+        background: #5100FF;
         color: #FFF;
     }
     
-    .button.navy::before,
-    .button.navy::after {
-        border-color: navy;
+    .button.color::before,
+    .button.color::after {
+        border-color: #5100FF;
     }
     
     .seeMore .button {
@@ -307,22 +305,33 @@
     .seeMore::before {
         content: '';
         position: absolute;
-        top: 42%;
+        top: 48%;
         left: 0;
         height: 2px;
         width: 100%;
-        background: navy;
+        background: #5100FF;
     }
     /* ------------------------------------------------- Main Menu ------------------------------------------------- */
+    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        width: 100%;
+    }
     
     #main-menu {
         position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: navy;
+        background: transparent;
         padding: 20px 0;
-        z-index: 999;
+    }
+    
+    #main-menu.sticky {
+        background: rgb(0 0 0 / 1.0);
     }
     
     #main-menu div {
@@ -359,7 +368,7 @@
     }
     
     #main-menu .main-menu li a:hover {
-        color: cyan;
+        color: #a880ff;
     }
     
     #main-menu .active::after {
@@ -369,15 +378,15 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: cyan;
+        background: #a880ff;
         border-radius: 10px;
     }
     /* ------------------------------------------------- Footer ------------------------------------------------- */
     
     footer {
-        background: navy;
-        height: 300px;
-        margin-top: 80px;
+        min-height: 300px;
+        margin-top: 0px;
+        background: rgb(0 0 0 / 1.0);
     }
     /* ------------------------------------------------- Dark Mode Switch ------------------------------------------------- */
     
@@ -452,18 +461,17 @@
     
     .landing {
         height: 80vh;
-        background: navy;
+        background: #5100FF;
         position: relative;
         display: flex;
         align-items: center;
-        margin-bottom: -80px;
+        /* margin-bottom: -80px; */
         /* clip-path: ellipse(85% 55% at 50% 44%); */
-        /* clip-path: polygon(-1px -1px, 100% -1px, 100% 90%, 50% 100%, -1px 90%); */
-        /* clip-path: polygon(-1px -1px, 100% -1px, 100% 80%, 0 100%); */
+        clip-path: polygon(-1px -1px, 100% -1px, 100% 85%, 50% 100%, -1px 85%);
+        /* clip-path: polygon(-1px -1px, 100% -1px, 100% 60%, 0 100%); */
         /* clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%); */
     }
-    
-    .landing svg {
+    /* .landing svg {
         position: absolute;
         top: 20%;
         left: 0;
@@ -471,22 +479,17 @@
         -webkit-transform: scaleX(-1);
         -ms-transform: scaleX(-1);
         transform: scaleX(-1);
-    }
-    /* .landing::after {
-        content: "";
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background-image: url('../assets/landing-swoosh.svg');
-        background-position: 50% 18vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-        transform: scaleX(-1);
     } */
+    
+    .stripe {
+        position: absolute;
+        z-index: -1;
+        margin-top: calc(-80vh + 18px);
+        height: 80vh;
+        width: 100%;
+        background: rgb(0 0 0 / 1.0);
+        clip-path: polygon(-1px -1px, 100% -1px, 100% 85%, 50% 100%, -1px 85%);
+    }
     
     .content {
         display: flex;
@@ -496,27 +499,27 @@
     }
     
     .content div {
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
     
     .content img {
         position: relative;
-        width: 700px;
+        width: 575px;
         height: auto;
         justify-self: end;
     }
     
     #roles {
-        color: rgb(255 255 255 / 0.85);
-        font-size: 2.4rem;
-        letter-spacing: 3px;
+        color: #FFF;
+        font-size: 4.4rem;
+        letter-spacing: 2px;
         margin-left: 6px;
-        margin-top: 20px;
+        margin-top: 30px;
         display: block;
     }
     
     .landing .button {
-        margin-top: 40px;
+        margin-top: 0px;
         margin-left: 6px;
     }
     /* ------------------------------------------------- About ------------------------------------------------- */
@@ -567,7 +570,7 @@
         bottom: 0;
         width: max-content;
         padding: 10px 40px;
-        background: navy;
+        background: #5100FF;
         color: #FFF;
         font-size: 2rem;
         font-weight: 500;
@@ -591,7 +594,7 @@
         top: 0;
         left: 0;
         text-align: center;
-        background: navy;
+        background: rgb(0 0 0 / 1.0);
         color: #FFF;
         display: flex;
         flex-direction: column;
@@ -608,7 +611,7 @@
     #websites>div>div>div a {
         display: flex;
         justify-content: center;
-        color: cyan;
+        color: #a880ff;
         text-decoration: none;
         font-size: 2rem;
         margin-top: 16px;
@@ -677,7 +680,7 @@
         left: 0;
         height: 90%;
         width: 1px;
-        background: navy;
+        background: rgb(0 0 0 / 1.0);
         z-index: -2;
     }
     
@@ -689,7 +692,7 @@
         transform: translate(0, -50%);
         height: 10px;
         width: 10px;
-        background: navy;
+        background: rgb(0 0 0 / 1.0);
         border-radius: 20px;
     }
     
@@ -703,7 +706,7 @@
         width: 14px;
         background: #FFF;
         border-radius: 20px;
-        border: 1px inset navy;
+        border: 1px inset rgb(0 0 0 / 1.0);
         z-index: -1;
     }
     
@@ -725,7 +728,7 @@
         top: 0;
         left: 0;
         text-align: center;
-        background: navy;
+        background: rgb(0 0 0 / 1.0);
         color: #FFF;
         display: flex;
         flex-direction: column;
@@ -742,7 +745,7 @@
     #webApp-image>div>div a {
         display: flex;
         justify-content: center;
-        color: cyan;
+        color: #5100FF;
         text-decoration: none;
         font-size: 2rem;
         margin-top: 16px;
@@ -803,17 +806,47 @@
     #testimonial-content {
         width: 660px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin: 40px auto 0;
+        margin: 80px auto 0;
         text-align: center;
+        /* overflow: hidden; */
+    }
+    
+    #testimonial-content::before,
+    #testimonial-content::after {
+        content: '"';
+        color: #5100FF;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        z-index: 999;
+        font-size: 16rem;
+        font-weight: 900;
+    }
+    
+    #testimonial-content::before {
+        top: 10px;
+        left: 20px;
+    }
+    
+    #testimonial-content::after {
+        bottom: 130px;
+        right: 40px;
+    }
+    
+    .testimonial {
+        flex: 0 0 100%;
     }
     
     #testimonial-content p {
-        padding: 50px;
-        border: 2px solid navy;
+        padding: 50px 100px;
+        border: 2px solid rgb(0 0 0 / 1.0);
+        /* background: rgb(0 0 0 / 1.0); */
+        color: #000;
         border-bottom: none;
+        line-height: 1.4;
     }
     
     #testimonial-content p::after,
@@ -823,7 +856,7 @@
         bottom: 0;
         height: 2px;
         width: calc(50% - 25px);
-        background: navy;
+        background: rgb(0 0 0 / 1.0);
     }
     
     #testimonial-content p::after {
@@ -839,9 +872,10 @@
         bottom: -18px;
         left: 50%;
         transform: translate(-50%, 0) rotate(45deg);
-        height: 36px;
-        width: 36px;
-        border: 2px solid navy;
+        height: 37px;
+        width: 37px;
+        border: 2px solid rgb(0 0 0 / 1.0);
+        /* background: rgb(0 0 0 / 1.0); */
         border-top: none;
         border-left: none;
     }
@@ -849,17 +883,142 @@
     #testimonial-content>div span {
         display: block;
         font-size: 2rem;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
         margin-top: 50px;
         text-transform: uppercase;
         font-weight: 600;
     }
     
     #testimonial-content>div span+span {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         letter-spacing: 2px;
         margin-top: 8px;
         font-weight: 400;
+        color: #5100FF;
+    }
+    /* ------------------------------------------------- Action ------------------------------------------------- */
+    
+    #action {
+        background: #5100FF;
+    }
+    
+    #action div {
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #action div h2 {
+        color: #FFF;
+        margin: 0;
+    }
+    /* ------------------------------------------------- Slider ------------------------------------------------- */
+    
+    .contentSlider {
+        /* display: ; */
+    }
+    
+    .slides {
+        opacity: 0;
+        display: none;
+        transition: 1s ease all;
+    }
+    
+    .slides.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    .slider-toggle {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto 0;
+    }
+    
+    .slider-arrow {
+        display: block;
+        height: 10px;
+        width: 10px;
+        border-color: rgb(0 0 0 / 1.0);
+        border-width: 4px;
+        transform: rotate(45deg);
+        cursor: pointer;
+        transition: 0.3s ease all;
+    }
+    
+    .slider-arrow.left {
+        border-left: solid;
+        border-bottom: solid;
+    }
+    
+    .slider-arrow.right {
+        border-right: solid;
+        border-top: solid;
+    }
+    
+    .slider-arrow:hover {
+        border-color: #5100FF;
+    }
+    
+    .slider-dots {
+        display: flex;
+        grid-gap: 10px;
+        padding: 0 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .slider-dot-control {
+        display: block;
+        height: 12px;
+        width: 12px;
+        border-radius: 10px;
+        border: 1px solid rgb(0 0 0 / 0.3);
+        background: rgb(0 0 0 / 0.1);
+        transition: 0.3s ease all;
+        cursor: pointer;
+    }
+    
+    .slider-dot-control:hover,
+    .slider-dot-control.active {
+        background: #5100FF;
+    }
+    /* ------------------------------------------------- Typing Effect ------------------------------------------------- */
+    
+    .typing-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .input-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 3.4rem;
+        background-color: white;
+        margin-left: 8px;
+    }
+    
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        40% {
+            opacity: 1;
+        }
+        60% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    /* // Then, inside .input-cursor: */
+    
+    .input-cursor {
+        animation: blink .6s linear infinite alternate;
     }
     /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
     
@@ -874,5 +1033,5 @@
     .landing.night,
     #main-menu.night,
     #about.night>div>div {
-        background: rgb(50 50 50 / 1)
+        background: rgb(0 0 0 / 1.0);
     }

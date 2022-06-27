@@ -1,3 +1,7 @@
+window.addEventListener('scroll', function() {
+    var header = document.querySelector('#main-menu');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
 /* ----------------------------------------------- Dark Mode ----------------------------------------------- */
 function darkMode() {
     let isChecked = document.querySelector('.switch input').checked
@@ -13,10 +17,38 @@ function darkMode() {
     }
 }
 document.querySelector('.switch').addEventListener('click', darkMode);
+/* ----------------------------------------------- Slider ----------------------------------------------- */
+function moveSlider() {
+    let dots = document.querySelectorAll('.slider-dot-control')
+    dots.forEach(element => {
+        element.classList.remove('active')
+    })
+    event.target.classList.add('active')
+    let slides = document.querySelectorAll('.slides')
+    slides.forEach(element => {
+        element.classList.remove('active')
+    })
+    slides[Array.from(dots).indexOf(event.target)].classList.add('active')
+}
+
+function addSliderDots() {
+    let dotCount = document.querySelectorAll('.testimonial')
+    let dotContainer = document.querySelector('.slider-dots')
+    for (i = 0; i < dotCount.length; i++) {
+        const el = document.createElement('span')
+        el.classList.add('slider-dot-control')
+        dotContainer.appendChild(el)
+    }
+    let dots = document.querySelectorAll('.slider-dot-control')
+    dots[0].classList.add('active')
+    dots.forEach(element => {
+        element.addEventListener('click', moveSlider)
+    })
+}
 
 
-
-/* ----------------------------------------------- Web App Toggle ----------------------------------------------- */
+addSliderDots()
+    /* ----------------------------------------------- Web App Toggle ----------------------------------------------- */
 function changeActiveWebApp() {
     let toggles = document.querySelectorAll('.webApp-toggle')
     toggles.forEach(element => {
@@ -42,9 +74,56 @@ function webAppToggle() {
 }
 webAppToggle()
 
+/* ----------------------------------------------- Mouse Typing ----------------------------------------------- */
+async function typeSentence(sentence, delay = 100) {
+    const letters = sentence.split("");
+    let i = 0;
+    while (i < letters.length) {
+        await waitForMs(delay);
+        document.getElementById('sentence').append(letters[i]);
+        i++
+    }
+    return;
+}
 
 
+function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
 
+async function deleteSentence() {
+    const sentence = document.getElementById('sentence').innerHTML
+    const letters = sentence.split("");
+    let i = 0;
+    while (letters.length > 0) {
+        await waitForMs(100);
+        letters.pop();
+        document.getElementById('sentence').innerHTML = (letters.join(""));
+    }
+}
+const carouselText = [
+    { text: "Front End Developer", color: "red" },
+    { text: "Web Designer", color: "orange" },
+    { text: "Logo Designer", color: "yellow" }
+]
+
+async function carousel(carouselList) {
+    var i = 0;
+    while (true) {
+        // updateFontColor(eleRef, carouselList[i].color)
+        await typeSentence(carouselList[i].text);
+        await waitForMs(1500);
+        await deleteSentence(carouselText);
+        await waitForMs(500);
+        i++
+        if (i >= carouselList.length) { i = 0; }
+    }
+}
+
+// function updateFontColor(color) {
+//     document.getElementById('sentence').css('color', color);
+// }
+carousel(carouselText)
 
 /* ----------------------------------------------- Particles ----------------------------------------------- */
 var canvas = document.getElementById("canvas"),
