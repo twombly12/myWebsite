@@ -191,7 +191,7 @@
     }
     
     .light-color-text {
-        color: #a880ff;
+        color: rgb(168 128 255 / 1);
     }
     
     .text-underline {
@@ -275,17 +275,17 @@
     .button:hover::after {
         width: 90%;
         height: 90%;
-        border-color: #FFF;
+        border-color: rgb(0 0 0 / 1.0);
     }
     
     .button.color {
-        background: #5100FF;
+        background: rgb(81 0 255 / 1);
         color: #FFF;
     }
     
     .button.color::before,
     .button.color::after {
-        border-color: #5100FF;
+        border-color: rgb(81 0 255 / 1);
     }
     
     .seeMore .button {
@@ -309,7 +309,7 @@
         left: 0;
         height: 2px;
         width: 100%;
-        background: #5100FF;
+        background: rgb(81 0 255 / 1);
     }
     /* ------------------------------------------------- Main Menu ------------------------------------------------- */
     
@@ -368,7 +368,11 @@
     }
     
     #main-menu .main-menu li a:hover {
-        color: #a880ff;
+        color: rgb(168 128 255 / 1);
+    }
+    
+    #main-menu.sticky .main-menu li a:hover {
+        color: rgb(168 128 255 / 1);
     }
     
     #main-menu .active::after {
@@ -378,7 +382,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background: #a880ff;
+        background: rgb(168 128 255 / 1);
         border-radius: 10px;
     }
     /* ------------------------------------------------- Footer ------------------------------------------------- */
@@ -461,7 +465,8 @@
     
     .landing {
         height: 80vh;
-        background: #5100FF;
+        /* background: rgb(81 0 255 / 1); */
+        background: radial-gradient(at calc(50% + 400px), rgb(81 0 255 / 1) 0%, #200066 100%);
         position: relative;
         display: flex;
         align-items: center;
@@ -498,10 +503,6 @@
         z-index: 999;
     }
     
-    .content div {
-        padding-bottom: 50px;
-    }
-    
     .content img {
         position: relative;
         width: 575px;
@@ -516,6 +517,7 @@
         margin-left: 6px;
         margin-top: 30px;
         display: block;
+        margin-bottom: 40px;
     }
     
     .landing .button {
@@ -570,7 +572,7 @@
         bottom: 0;
         width: max-content;
         padding: 10px 40px;
-        background: #5100FF;
+        background: rgb(81 0 255 / 1);
         color: #FFF;
         font-size: 2rem;
         font-weight: 500;
@@ -586,7 +588,8 @@
         border-radius: 0 10px 0 0;
     }
     
-    #websites>div>div>div {
+    #websites>div>div>div,
+    #webApp-image>div>div {
         opacity: 0%;
         width: 100%;
         height: 100%;
@@ -594,27 +597,46 @@
         top: 0;
         left: 0;
         text-align: center;
-        background: rgb(0 0 0 / 1.0);
+        background: rgb(0 0 0 / 0.8);
         color: #FFF;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         padding: 10%;
-        transition: 0.3s ease all;
+        transition: 0.5s ease all;
     }
     
-    #websites>div>div>div:hover {
+    #websites>div>div>div:hover,
+    #webApp-image>div>div:hover {
         opacity: 1;
     }
     
-    #websites>div>div>div a {
+    #websites>div>div>div a,
+    #webApp-image>div>div a {
         display: flex;
         justify-content: center;
-        color: #a880ff;
+        color: rgb(168 128 255 / 1);
         text-decoration: none;
         font-size: 2rem;
         margin-top: 16px;
+        transition: 0.3s ease all;
+    }
+    
+    #websites>div>div>div a:hover,
+    #webApp-image>div>div a:hover {
+        color: #FFF;
+    }
+    
+    #websites .material-symbols-outlined,
+    #webApp-image .material-symbols-outlined {
+        color: #FFF;
+        transition: 0.3s ease all;
+    }
+    
+    #websites>div>div>div a:hover .material-symbols-outlined,
+    #webApp-image>div>div a:hover .material-symbols-outlined {
+        color: rgb(168 128 255 / 1);
     }
     
     .circle-graphic {
@@ -660,15 +682,18 @@
     #webApp-selector .webApp-toggle span {
         displaY: block;
         height: 0px;
+        max-height: 0px;
         overflow: hidden;
         font-size: 1.8rem;
         padding-bottom: 0px;
         line-height: 1.6;
+        transition: 0.5s ease all;
     }
     
     #webApp-selector .webApp-toggle.active span {
         height: 100%;
-        transition: 0.3s ease all;
+        max-height: 150px;
+        transition: 0.5s ease all;
         /* padding-top: 14px; */
     }
     
@@ -696,6 +721,10 @@
         border-radius: 20px;
     }
     
+    #webApp-selector .active h4::before {
+        background: rgb(81 0 255 / 1);
+    }
+    
     #webApp-selector .active h4::after {
         content: "";
         position: absolute;
@@ -718,37 +747,6 @@
         object-fit: contain;
         width: 100%;
         padding-left: 40px;
-    }
-    
-    #webApp-image>div>div {
-        opacity: 0%;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        text-align: center;
-        background: rgb(0 0 0 / 1.0);
-        color: #FFF;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10%;
-        transition: 0.3s ease all;
-    }
-    
-    #webApp-image>div>div:hover {
-        opacity: 1;
-    }
-    
-    #webApp-image>div>div a {
-        display: flex;
-        justify-content: center;
-        color: #5100FF;
-        text-decoration: none;
-        font-size: 2rem;
-        margin-top: 16px;
     }
     
     .webApp-content {
@@ -817,7 +815,7 @@
     #testimonial-content::before,
     #testimonial-content::after {
         content: '"';
-        color: #5100FF;
+        color: rgb(81 0 255 / 1);
         position: absolute;
         width: 40px;
         height: 40px;
@@ -894,12 +892,12 @@
         letter-spacing: 2px;
         margin-top: 8px;
         font-weight: 400;
-        color: #5100FF;
+        color: rgb(81 0 255 / 1);
     }
     /* ------------------------------------------------- Action ------------------------------------------------- */
     
     #action {
-        background: #5100FF;
+        background: rgb(81 0 255 / 1);
     }
     
     #action div {
@@ -959,7 +957,7 @@
     }
     
     .slider-arrow:hover {
-        border-color: #5100FF;
+        border-color: rgb(81 0 255 / 1);
     }
     
     .slider-dots {
@@ -983,7 +981,7 @@
     
     .slider-dot-control:hover,
     .slider-dot-control.active {
-        background: #5100FF;
+        background: rgb(81 0 255 / 1);
     }
     /* ------------------------------------------------- Typing Effect ------------------------------------------------- */
     
