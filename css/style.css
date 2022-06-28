@@ -499,8 +499,10 @@
     .content {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         z-index: 999;
+        flex-direction: row-reverse;
+        grid-gap: 10px;
     }
     
     .content img {
@@ -508,6 +510,7 @@
         width: 575px;
         height: auto;
         justify-self: end;
+        top: 40px;
     }
     
     #roles {
