@@ -690,11 +690,13 @@
         font-size: 1.8rem;
         padding-bottom: 0px;
         line-height: 1.6;
+        opacity: 0;
         transition: 0.5s ease all;
     }
     
     #webApp-selector .webApp-toggle.active span {
         height: 100%;
+        opacity: 1;
         max-height: 150px;
         transition: 0.5s ease all;
         /* padding-top: 14px; */
