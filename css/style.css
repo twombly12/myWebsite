@@ -385,12 +385,112 @@
         background: rgb(168 128 255 / 1);
         border-radius: 10px;
     }
-    /* ------------------------------------------------- Footer ------------------------------------------------- */
+    /* ------------------------------------------------- Footer Social ------------------------------------------------- */
+    
+    #action {
+        background: rgb(81 0 255 / 1);
+        margin-top: 4%;
+        padding-bottom: 2%;
+        clip-path: polygon(0px 0px, 100% 0px, 100% 60%, 50% 100%, 0px 60%);
+    }
+    
+    #action div {
+        padding: 12px 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 16px;
+    }
+    
+    footer .logo {
+        max-width: 200px;
+    }
+    
+    .social a {
+        height: 40px;
+        width: 40px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #action div h3 {
+        color: #FFF;
+        margin-top: 3px;
+    }
+    /* ------------------------------------------------- Footer Menu ------------------------------------------------- */
     
     footer {
-        min-height: 300px;
-        margin-top: 0px;
         background: rgb(0 0 0 / 1.0);
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: space-between;
+        padding: 40px 0 60px;
+    }
+    
+    .footer-content h3 {
+        flex: 0 0 25%;
+        color: #FFF;
+        text-transform: uppercase;
+        width: max-content;
+        padding-bottom: 4px;
+    }
+    
+    .footer-content h3::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: rgb(81 0 255 / 1);
+    }
+    
+    .footer-content ul li a {
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: #FFF;
+        font-weight: 600;
+        margin: 20px 0;
+        display: block;
+        transition: 0.3s ease all;
+    }
+    
+    .footer-content ul li a:hover {
+        color: rgb(168 128 255 / 1);
+    }
+    
+    .footer-content::after {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background: rgb(15 15 15 / 1);
+    }
+    
+    .footer-content .button {
+        margin-top: 28px;
+    }
+    /* ------------------------------------------------- Footer Copyright ------------------------------------------------- */
+    
+    #copyright {
+        padding: 16px 0;
+    }
+    
+    #copyright span {
+        color: rgb(255 255 255 / 1);
+        text-align: center;
+        font-size: 1.2rem;
+        displaY: block;
     }
     /* ------------------------------------------------- Dark Mode Switch ------------------------------------------------- */
     
@@ -898,24 +998,6 @@
         margin-top: 8px;
         font-weight: 400;
         color: rgb(81 0 255 / 1);
-    }
-    /* ------------------------------------------------- Action ------------------------------------------------- */
-    
-    #action {
-        background: rgb(81 0 255 / 1);
-    }
-    
-    #action div {
-        padding: 20px 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
-    
-    #action div h2 {
-        color: #FFF;
-        margin: 0;
     }
     /* ------------------------------------------------- Slider ------------------------------------------------- */
     
