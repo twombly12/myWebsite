@@ -106,6 +106,11 @@
         line-height: 1;
     }
     
+    body,
+    main {
+        z-index: -1;
+    }
+    
     ol,
     ul {
         list-style: none;
@@ -1114,16 +1119,79 @@
     }
     /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
     
-    .night .cls-1 {
-        fill: black;
+    .night *:not(.dark-color-text) {
+        color: #FFF;
     }
     
-    main.night {
-        background: black !important;
+    #about.night>div>div h3 {
+        color: rgb(168 128 255 / 1);
     }
     
-    .landing.night,
-    #main-menu.night,
-    #about.night>div>div {
+    .night main,
+    .night .circle-graphic,
+    .night #testimonials,
+    .night #webApp-selector .active h4::after {
+        background: rgb(12, 12, 12);
+    }
+    
+    .night #main-menu.sticky {
         background: rgb(0 0 0 / 1.0);
+    }
+    
+    #main-menu {
+        background: transparent;
+    }
+    
+    .night .landing {
+        background: radial-gradient(at calc(50% + 400px), rgb(28, 28, 28) 0%, rgb(8, 8, 8) 100%);
+    }
+    
+    .night .button,
+    .night .stripe {
+        background: rgb(81 0 255 / 1);
+    }
+    
+    .night .button::before,
+    .night .button::after {
+        border-color: rgb(81 0 255 / 1);
+    }
+    
+    .night #about>div>div,
+    .night #testimonial-content p,
+    .night #testimonial-content p .arrow {
+        background: linear-gradient(180deg, rgb(30 30 30 / 1) 30%, rgb(10 10 10 / 1) 100%);
+        box-shadow: 0px 4px 40px rgb(255 255 255 / 5%), 0px 0px 20px rgb(0 0 0 / 70%);
+        border-radius: 10px;
+        border-color: rgb(0 0 0 / 0)
+    }
+    
+    .night #testimonial-content p::before,
+    .night #testimonial-content p::after,
+    .night #testimonial-content p,
+    .night #testimonial-content p .arrow {
+        border-color: rgb( 0 0 0 / 0);
+    }
+    
+    .night .text-underline::after,
+    .night .text-underline::before {
+        border-color: rgb(255 255 255 / 0.3);
+    }
+    
+    .night .seeMore .button {
+        border-color: rgb(12, 12, 12);
+    }
+    
+    .night #webApp-selector::before,
+    .night #webApp-selector :not(.active) h4::before {
+        background: #FFF;
+    }
+    
+    .night #webApp-selector .active h4::after {
+        border-color: #FFF;
+        border-width: 2px;
+        left: -28px;
+    }
+    
+    .night #logos>div::after {
+        background: radial-gradient(circle, rgb( 12 12 12 / 0) 0%, rgb(12 12 12 / 1) 90%);
     }
