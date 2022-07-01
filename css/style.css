@@ -548,11 +548,12 @@
     }
     
     input:checked+.slider {
-        background-color: #2196F3;
+        background-color: rgb(81 0 255 / 1);
+        ;
     }
     
     input:focus+.slider {
-        box-shadow: 0 0 1px #2196F3;
+        box-shadow: 0 0 1px rgb(81 0 255 / 1);
     }
     
     input:checked+.slider:before {
@@ -777,6 +778,7 @@
         display: flex;
         height: 100%;
         margin-top: 40px;
+        grid-gap: 40px;
     }
     
     #webApp-selector {
@@ -863,7 +865,6 @@
     #webApp-image img {
         object-fit: contain;
         width: 100%;
-        padding-left: 40px;
     }
     
     .webApp-content {
@@ -958,8 +959,6 @@
     #testimonial-content p {
         padding: 50px 100px;
         border: 2px solid rgb(0 0 0 / 1.0);
-        /* background: rgb(0 0 0 / 1.0); */
-        color: #000;
         border-bottom: none;
         line-height: 1.4;
     }
@@ -1159,10 +1158,7 @@
     .night #about>div>div,
     .night #testimonial-content p,
     .night #testimonial-content p .arrow {
-        background: linear-gradient(180deg, rgb(30 30 30 / 1) 30%, rgb(10 10 10 / 1) 100%);
-        box-shadow: 0px 4px 40px rgb(255 255 255 / 5%), 0px 0px 20px rgb(0 0 0 / 70%);
-        border-radius: 10px;
-        border-color: rgb(0 0 0 / 0)
+        background: black;
     }
     
     .night #testimonial-content p::before,
@@ -1181,17 +1177,32 @@
         border-color: rgb(12, 12, 12);
     }
     
-    .night #webApp-selector::before,
     .night #webApp-selector :not(.active) h4::before {
         background: #FFF;
     }
     
+    .night .slider-dot-control,
     .night #webApp-selector .active h4::after {
         border-color: #FFF;
+    }
+    
+    .night #webApp-selector .active h4::after {
         border-width: 2px;
         left: -28px;
     }
     
     .night #logos>div::after {
         background: radial-gradient(circle, rgb( 12 12 12 / 0) 0%, rgb(12 12 12 / 1) 90%);
+    }
+    
+    .night #logos>div img {
+        background: rgba(0, 0, 0, 1);
+    }
+    
+    .night #webApp-selector::before {
+        background: rgb(255 255 255 / 0.3)
+    }
+    
+    .night .material-symbols-outlined {
+        color: rgb(168 128 255 / 1);
     }
