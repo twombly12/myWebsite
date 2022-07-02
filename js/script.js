@@ -1,8 +1,17 @@
+/* ----------------------------------------------- Sticky Header ----------------------------------------------- */
 window.addEventListener('scroll', function() {
-    var header = document.querySelector('#main-menu');
-    header.classList.toggle('sticky', window.scrollY > 0);
+    var main = document.querySelector('#main-menu');
+    var mobile = document.querySelector('#mobile-menu');
+    main.classList.toggle('sticky', window.scrollY > 0);
+    mobile.classList.toggle('sticky', window.scrollY > 0);
 });
-/* ----------------------------------------------- Dark Mode ----------------------------------------------- */
+/* ----------------------------------------------- Mobile Menu ----------------------------------------------- */
+function toggleMobileMenu() {
+    let hamburger = document.getElementById('hamburger')
+    hamburger.classList.toggle('open')
+}
+document.getElementById('hamburger').addEventListener('click', toggleMobileMenu)
+    /* ----------------------------------------------- Dark Mode ----------------------------------------------- */
 function darkMode() {
     let isChecked = document.querySelector('.switch input').checked
     let elements = document.querySelectorAll('.day')
