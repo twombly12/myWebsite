@@ -165,14 +165,16 @@
         font-size: 2.4rem;
         color: #000;
         font-weight: 700;
-        line-height: 1.8;
+        line-height: 1.2;
+        margin-bottom: 8px;
     }
     
     h4 {
         font-size: 2.4rem;
         color: #000;
         font-weight: 700;
-        line-height: 1.8;
+        line-height: 1.2;
+        margin-bottom: 8px;
     }
     
     p {
@@ -536,11 +538,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 0.3s ease all;
+    }
+    
+    .social a:hover {
+        border-color: black;
     }
     
     #action div h3 {
         color: #FFF;
-        margin-top: 3px;
+        margin: 3px 10px 0px 0px;
     }
     /* ------------------------------------------------- Footer Menu ------------------------------------------------- */
     
@@ -561,7 +568,7 @@
         color: #FFF;
         text-transform: uppercase;
         width: max-content;
-        padding-bottom: 4px;
+        padding-bottom: 10px;
     }
     
     .footer-content h3::after {
@@ -569,7 +576,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        height: 1px;
+        height: 2px;
         width: 100%;
         background: rgb(81 0 255 / 1);
     }
@@ -759,10 +766,11 @@
     }
     
     #about>div>div {
-        border: 1px solid rgb(0 0 0 / 0.1);
+        border: 1px solid rgb(0 0 0 / 0.2);
         padding: 30px;
         text-align: center;
         background: #FFF;
+        border-radius: 10px;
     }
     /* ------------------------------------------------- Websites ------------------------------------------------- */
     
@@ -779,6 +787,31 @@
         height: 300px;
         overflow: hidden;
         border-radius: 20px;
+    }
+    
+    #websites>div>div::after {
+        content: "";
+        position: absolute;
+        z-index: 99;
+        border-radius: 100px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    #websites>div>div:nth-child(2)::after {
+        right: -69px;
+        bottom: -69px;
+    }
+    
+    #websites>div>div:nth-child(3)::after {
+        left: -69px;
+        bottom: -69px;
+    }
+    
+    #websites>div>div:last-child::after {
+        left: 50%;
+        top: -69px;
+        transform: translate(-50%, 0);
     }
     
     #websites>div>div:last-child {
@@ -822,7 +855,7 @@
         top: 0;
         left: 0;
         text-align: center;
-        background: rgb(0 0 0 / 0.8);
+        background: rgb(0 0 0 / 0.9);
         color: #FFF;
         display: flex;
         flex-direction: column;
@@ -846,6 +879,7 @@
         font-size: 2rem;
         margin-top: 16px;
         transition: 0.3s ease all;
+        font-weight: 600;
     }
     
     #websites>div>div>div a:hover,
@@ -963,12 +997,13 @@
         width: 14px;
         background: #FFF;
         border-radius: 20px;
-        border: 1px inset rgb(0 0 0 / 1.0);
+        border: 1px solid rgb(0 0 0 / 1.0);
         z-index: -1;
     }
     
     #webApp-image {
-        flex: 0 0 75%
+        flex: 0 0 75%;
+        overflow: hidden;
     }
     
     #webApp-image img {
@@ -990,6 +1025,8 @@
         display: flex;
         grid-gap: 10px;
         flex-wrap: wrap;
+        overflow: hidden;
+        padding-top: 20px;
     }
     
     #logos>div::after {
@@ -1002,17 +1039,32 @@
         background: radial-gradient(circle, rgb( 255 255 255 / 0) 0%, rgb(255 255 255 / 1) 90%);
     }
     
-    #logos>div img {
+    #logos>div span {
         padding: 40px 20px;
-        /* border: 1px solid black; */
-        background: rgb(0 0 0 / 0.1);
+        /* background: rgb(0 0 0 / 0.1); */
         flex: 0 0 calc((100%/8) - 10px);
         width: calc((100%/8) - 10px);
         border-radius: 6px;
-        filter: grayscale();
     }
     
-    #logos>div img:nth-child(2n+1) {
+    #logos>div span::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        background: rgb(0 0 0 / 0.1);
+        border: 1px solid rgb(0 0 0 / 0.2);
+    }
+    
+    #logos>div img {
+        width: calc(100%);
+        /* filter: grayscale(); */
+    }
+    
+    #logos>div span:nth-child(2n+1) {
         top: 20px;
     }
     /* ------------------------------------------------- Testimonials ------------------------------------------------- */
@@ -1232,18 +1284,23 @@
         color: #FFF;
     }
     
-    #about.night>div>div h3 {
+    #about.night>div>div h3,
+    .night .material-symbols-outlined {
         color: rgb(168 128 255 / 1);
     }
     
     .night main,
     .night .circle-graphic,
     .night #testimonials,
-    .night #webApp-selector .active h4::after {
+    .night #webApp-selector .active h4::after,
+    .night #about>div>div,
+    .night .webApp-content.active {
         background: rgb(12, 12, 12);
     }
     
-    .night #main-menu.sticky {
+    .night #main-menu.sticky,
+    .night #testimonial-content p,
+    .night #testimonial-content p .arrow {
         background: rgb(0 0 0 / 1.0);
     }
     
@@ -1260,15 +1317,21 @@
         background: rgb(81 0 255 / 1);
     }
     
+    .night #logos>div::after {
+        background: radial-gradient(circle, rgb( 12 12 12 / 0) 0%, rgb(12 12 12 / 1) 90%);
+    }
+    
+    .night #webApp-selector :not(.active) h4::before {
+        background: #FFF;
+    }
+    
+    .night #webApp-selector::before {
+        background: rgb(255 255 255 / 0.3)
+    }
+    
     .night .button::before,
     .night .button::after {
         border-color: rgb(81 0 255 / 1);
-    }
-    
-    .night #about>div>div,
-    .night #testimonial-content p,
-    .night #testimonial-content p .arrow {
-        background: black;
     }
     
     .night #testimonial-content p::before,
@@ -1287,10 +1350,6 @@
         border-color: rgb(12, 12, 12);
     }
     
-    .night #webApp-selector :not(.active) h4::before {
-        background: #FFF;
-    }
-    
     .night .slider-dot-control,
     .night #webApp-selector .active h4::after {
         border-color: #FFF;
@@ -1301,18 +1360,21 @@
         left: -28px;
     }
     
-    .night #logos>div::after {
-        background: radial-gradient(circle, rgb( 12 12 12 / 0) 0%, rgb(12 12 12 / 1) 90%);
+    .night #about>div>div,
+    .night #webApp-image,
+    .night #logos>div span::after,
+    .night #websites>div>div {
+        border-radius: 10px;
+        box-shadow: 0 0 12px 0px rgb(81 0 255 / 1), inset 0 0 8px 0px rgb(81 0 255 / 1);
+        border: 2px solid rgb(81 0 255 / 1);
     }
     
-    .night #logos>div img {
-        background: rgba(0, 0, 0, 1);
+    .night #logos>div span::after {
+        box-shadow: 0 0 4px 0px rgb(81 0 255 / 1);
     }
     
-    .night #webApp-selector::before {
-        background: rgb(255 255 255 / 0.3)
-    }
-    
-    .night .material-symbols-outlined {
-        color: rgb(168 128 255 / 1);
+    .night #websites>div>div::after {
+        background: rgb(12 12 12);
+        box-shadow: 0 0 20px 0px rgb(81 0 255 / 1);
+        border: 2px solid rgb(81 0 255 / 1);
     }
