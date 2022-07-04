@@ -4,6 +4,12 @@ window.addEventListener('scroll', function() {
     var mobile = document.querySelector('#mobile-menu');
     main.classList.toggle('sticky', window.scrollY > 0);
     mobile.classList.toggle('sticky', window.scrollY > 0);
+
+    if (Array.from(main.classList).includes('sticky')) {
+        document.querySelector('#main-menu div img').src = 'assets/Dash Logo Colours-purple.svg';
+    } else {
+        document.querySelector('#main-menu div img').src = 'assets/Dash Logo Colours-White.svg';
+    }
 });
 /* ----------------------------------------------- Mobile Menu ----------------------------------------------- */
 function toggleMobileMenu() {

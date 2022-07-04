@@ -355,9 +355,11 @@
         justify-content: space-between;
     }
     
-    nav.menu .logo {
-        max-width: 200px;
+    nav.menu .logo,
+    footer .logo {
+        max-width: 155px;
         height: 100%;
+        position: relative;
     }
     
     #main-menu .main-menu {
@@ -513,7 +515,7 @@
     #action {
         background: rgb(81 0 255 / 1);
         margin-top: 4%;
-        padding-bottom: 2%;
+        padding-bottom: 20px;
         clip-path: polygon(0px 0px, 100% 0px, 100% 60%, 50% 100%, 0px 60%);
     }
     
@@ -524,10 +526,6 @@
         align-items: center;
         justify-content: space-between;
         grid-gap: 16px;
-    }
-    
-    footer .logo {
-        max-width: 200px;
     }
     
     .social a {
