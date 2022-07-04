@@ -142,11 +142,11 @@
     
     html {
         font-size: 10px;
-        font-family: 'Yantramanav', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     }
     
     h1 {
-        font-size: 8.8rem;
+        font-size: 8rem;
         color: #FFF;
         font-weight: 700;
         letter-spacing: -4px;
@@ -155,8 +155,8 @@
     h2 {
         font-size: 4.8rem;
         color: #000;
-        font-weight: 700;
-        letter-spacing: -4px;
+        font-weight: 800;
+        letter-spacing: -3px;
         text-transform: uppercase;
         margin: 0 auto;
     }
@@ -165,14 +165,14 @@
         font-size: 2.4rem;
         color: #000;
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.8;
     }
     
     h4 {
         font-size: 2.4rem;
         color: #000;
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.8;
     }
     
     p {
@@ -1041,6 +1041,7 @@
     
     #testimonial-content::before,
     #testimonial-content::after {
+        font-family: 'Yantramanav';
         content: '"';
         color: rgb(81 0 255 / 1);
         position: absolute;
@@ -1106,7 +1107,7 @@
     #testimonial-content>div span {
         display: block;
         font-size: 2rem;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         margin-top: 50px;
         text-transform: uppercase;
         font-weight: 600;
@@ -1114,9 +1115,9 @@
     
     #testimonial-content>div span+span {
         font-size: 1.5rem;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         margin-top: 8px;
-        font-weight: 400;
+        font-weight: 600;
         color: rgb(81 0 255 / 1);
     }
     /* ------------------------------------------------- Slider ------------------------------------------------- */
