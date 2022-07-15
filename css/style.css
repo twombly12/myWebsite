@@ -1068,7 +1068,7 @@
     /* ------------------------------------------------- Testimonials ------------------------------------------------- */
     
     #testimonials {
-        margin: -63px 0 0 0;
+        margin: -23px 0 0 0;
         background: #FFF;
     }
     
@@ -1287,7 +1287,7 @@
         color: rgb(168 128 255 / 1);
     }
     
-    .night main,
+    body.night,
     .night .circle-graphic,
     .night #testimonials,
     .night #webApp-selector .active h4::after,
