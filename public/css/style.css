@@ -357,7 +357,7 @@
     
     nav.menu .logo,
     footer .logo {
-        max-width: 155px;
+        width: 155px;
         height: 100%;
         position: relative;
     }

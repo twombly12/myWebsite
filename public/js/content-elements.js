@@ -29,7 +29,7 @@ function header() {
     header.innerHTML = `
         <nav id="main-menu" class="menu">
             <div>
-                <img class="logo" src="../assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" />
+                <a class="logo" href="/"><img  src="/assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" /></a>
                 <ul class="main-menu">
                     ${menuLinks.services}
                     ${menuLinks.info}
@@ -68,13 +68,13 @@ function footer() {
     footer.innerHTML = `
     <div id="action">
                 <div class="section">
-                    <img class="logo" src="../assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" />
+                    <a href="/" class="logo"><img src="/assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" /></a>
                     <div class="social">
                         <h3>Follow Us</h3>
-                        <a href=""><img src="../assets/fb.png" alt="social" /></a>
-                        <a href=""><img src="../assets/insta.png" alt="social" /></a>
-                        <a href=""><img src="../assets/fb.png" alt="social" /></a>
-                        <a href=""><img src="../assets/insta.png" alt="social" /></a>
+                        <a href=""><img src="/assets/fb.png" alt="social" /></a>
+                        <a href=""><img src="/assets/insta.png" alt="social" /></a>
+                        <a href=""><img src="/assets/fb.png" alt="social" /></a>
+                        <a href=""><img src="/assets/insta.png" alt="social" /></a>
                     </div>
                 </div>
             </div>
