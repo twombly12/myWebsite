@@ -1038,8 +1038,7 @@
     }
     
     #logos>div span {
-        padding: 40px 20px;
-        /* background: rgb(0 0 0 / 0.1); */
+        padding-top: 4px;
         flex: 0 0 calc((100%/8) - 10px);
         width: calc((100%/8) - 10px);
         border-radius: 6px;
@@ -1059,7 +1058,6 @@
     
     #logos>div img {
         width: calc(100%);
-        /* filter: grayscale(); */
     }
     
     #logos>div span:nth-child(2n+1) {
@@ -1169,6 +1167,44 @@
         margin-top: 8px;
         font-weight: 600;
         color: rgb(81 0 255 / 1);
+    }
+    /* ------------------------------------------------- Sub Page Landings ------------------------------------------------- */
+    
+    .landing.sub-landing {
+        height: 30vh;
+        padding-top: 5vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .stripe.sub-landing {
+        margin-top: calc(-30vh + 18px);
+        height: 30vh;
+    }
+    
+    .landing.sub-landing::after,
+    .landing.sub-landing::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .landing.sub-landing::after {
+        background: radial-gradient(at calc(50%), rgb(81 0 255 / 1) 0%, #200066 100%);
+        opacity: 0.86;
+    }
+    
+    .landing.sub-landing::before {
+        background: black;
+        mix-blend-mode: saturation;
+    }
+    
+    .landing.sub-landing.contact-background {
+        background-image: url('../assets/photo-collage-strip-effect-mockup_117023-2473.jpg');
     }
     /* ------------------------------------------------- Slider ------------------------------------------------- */
     
@@ -1375,4 +1411,8 @@
         background: rgb(12 12 12);
         box-shadow: 0 0 20px 0px rgb(81 0 255 / 1);
         border: 2px solid rgb(81 0 255 / 1);
+    }
+    
+    .night #logos>div img {
+        filter: grayscale();
     }
