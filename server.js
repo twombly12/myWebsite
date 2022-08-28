@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express()
 const nodemailer = require('nodemailer');
+const dotenv = require('dotenv').config()
 
 
 
@@ -85,19 +86,19 @@ app.post('/', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'amian.dimichele@gmail.com',
+            user: process.env.SECRET_ID,
 
             // Store this as an environment variable!!!
             // Store this as an environment variable!!!
             // Store this as an environment variable!!!
             // Store this as an environment variable!!!
             // Store this as an environment variable!!!
-            pass: 'pluwnxcrmvsexnpn'
+            pass: process.env.SECRET_KEY,
         }
     })
     const mailOptions = {
         from: 'req.body.email',
-        to: 'amian.dimichele@gmail.com',
+        to: 'process.env.SECRET_ID',
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: req.body.message,
     }
