@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express()
 const nodemailer = require('nodemailer');
-const dotenv = require('dotenv').config()
+require('dotenv').config()
 
 
 
@@ -87,18 +87,12 @@ app.post('/', (req, res) => {
         service: 'gmail',
         auth: {
             user: process.env.SECRET_ID,
-
-            // Store this as an environment variable!!!
-            // Store this as an environment variable!!!
-            // Store this as an environment variable!!!
-            // Store this as an environment variable!!!
-            // Store this as an environment variable!!!
             pass: process.env.SECRET_KEY,
         }
     })
     const mailOptions = {
         from: 'req.body.email',
-        to: 'process.env.SECRET_ID',
+        to: process.env.SECRET_ID,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
         text: req.body.message,
     }
