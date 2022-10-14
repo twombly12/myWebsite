@@ -69,9 +69,9 @@ function changeActiveWebApp() {
     toggles.forEach(element => {
         element.classList.remove('active')
     })
-    event.target.parentNode.classList.add('active')
+    event.target.closest('.webApp-toggle').classList.add('active')
     let arr = Array.from(toggles)
-    let appIndex = arr.indexOf(event.target.parentNode)
+    let appIndex = arr.indexOf(event.target.closest('.webApp-toggle'))
 
     let image = document.querySelectorAll('.webApp-content')
     image.forEach(element => {
