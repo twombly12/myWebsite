@@ -88,6 +88,8 @@
         }
         /* HTML5 display-role reset for older browsers */
         
+        html {}
+        
         article,
         aside,
         details,
@@ -101,16 +103,18 @@
         section {
             display: block;
         }
+        /* html {
+            z-index: -1;
+        }
+        body,
+        main {
+            z-index: -1;
+        } */
         
         body {
             line-height: 1;
             overflow-x: none;
             overflow-y: scroll;
-        }
-        
-        body,
-        main {
-            z-index: -1;
         }
         
         body,
