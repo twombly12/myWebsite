@@ -1034,20 +1034,55 @@ input:checked+.slider:before {
     left: 0;
     height: 100%;
     width: 100%;
+    background: none;
+}
+
+.circle-graphic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #FFF;
     z-index: 99;
 }
 
-.website-feature:nth-child(even) .circle-graphic {
+.website-feature:nth-child(even) .circle-graphic::before {
     clip-path: circle(50px at calc(0% - 15px) calc(100% + 15px));
 }
 
-.website-feature:nth-child(odd) .circle-graphic {
+.website-feature:nth-child(odd) .circle-graphic::before {
     clip-path: circle(50px at calc(100% + 15px) calc(100% + 15px));
 }
 
-.website-feature:last-child .circle-graphic {
+.website-feature:last-child .circle-graphic::before {
     clip-path: circle(50px at 50% calc(0% - 15px));
+}
+
+.circle-graphic::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #FFF;
+    z-index: 99;
+}
+
+.website-feature:nth-child(even) .circle-graphic::after {
+    clip-path: circle(50px at calc(0% - 15px) calc(0% - 15px));
+}
+
+.website-feature:nth-child(odd) .circle-graphic::after {
+    clip-path: circle(50px at calc(100% + 15px) calc(0% - 15px));
+}
+
+.website-feature:last-child .circle-graphic::after,
+.website-feature:first-child .circle-graphic::after,
+.website-feature:nth-child(2) .circle-graphic::after {
+    display: none;
 }
 
 
