@@ -10,7 +10,7 @@
 /* ---- */
 
 
-/* ------- Replace Purple (81 0 255) with Green (57 181 74) ---- */
+/* ------- Replace Purple (cd git   cd g) with Green (57 181 74) ---- */
 
 
 /* ---- */
@@ -1004,7 +1004,6 @@ input:checked+.slider:before {
 .webApps-hover a {
     display: flex;
     justify-content: center;
-    color: rgb(168 128 255 / 1);
     text-decoration: none;
     font-size: 2rem;
     margin-top: 16px;
@@ -1575,7 +1574,7 @@ form textarea {
 
 /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
 
-.night *:not(.dark-color-text) {
+.night *:not(.dark-color-text):not(.light-color-text) {
     color: #FFF;
 }
 
@@ -1585,7 +1584,6 @@ form textarea {
 }
 
 body.night,
-.night .circle-graphic,
 .night #testimonials,
 .night #webApp-selector .active h4::after,
 .night #about>div>div,
@@ -1603,7 +1601,7 @@ body.night,
     background: transparent;
 }
 
-.night .landing {
+.night .landing::after {
     background: radial-gradient(at calc(50% + 400px), rgb(28, 28, 28) 0%, rgb(8, 8, 8) 100%);
 }
 
@@ -1629,11 +1627,24 @@ body.night,
     border-color: rgb(81 0 255 / 1);
 }
 
+.night #testimonial-content p {
+    box-shadow: 0 0 12px 0px rgb(81 0 255), inset 0 0 8px 0px rgb(81 0 255);
+    border: 2px solid rgb(81 0 255 / 1);
+    border-bottom: none;
+}
+
 .night #testimonial-content p::before,
-.night #testimonial-content p::after,
-.night #testimonial-content p,
+.night #testimonial-content p::after {
+    box-shadow: 0 0 12px 0px rgb(81 0 255), inset 0 0 8px 0px rgb(81 0 255);
+    border: 2px solid rgb(81 0 255 / 1);
+    border-bottom: none;
+}
+
 .night #testimonial-content p .arrow {
-    border-color: rgb( 0 0 0 / 0);
+    box-shadow: 4px 4px 12px -1px rgb(81 0 255), inset -5px -5px 6px -1px rgb(81 0 255);
+    border: 2px solid rgb(81 0 255 / 1);
+    border-left: none;
+    border-top: none;
 }
 
 .night .text-underline::after,
@@ -1658,8 +1669,9 @@ body.night,
 .night #about>div>div,
 .night #webApp-image,
 .night #logos>div span::after,
-.night #websites>div>div {
-    border-radius: 10px;
+.night #websites>div>div,
+.night .logos img {
+    /* border-radius: 10px; */
     box-shadow: 0 0 12px 0px rgb(81 0 255 / 1), inset 0 0 8px 0px rgb(81 0 255 / 1);
     border: 2px solid rgb(81 0 255 / 1);
 }
@@ -1668,12 +1680,15 @@ body.night,
     box-shadow: 0 0 4px 0px rgb(81 0 255 / 1);
 }
 
-.night #websites>div>div::after {
+.night .circle-graphic::before,
+.night .circle-graphic::after {
     background: rgb(12 12 12);
-    box-shadow: 0 0 20px 0px rgb(81 0 255 / 1);
-    border: 2px solid rgb(81 0 255 / 1);
 }
 
 .night #logos>div img {
+    filter: grayscale();
+}
+
+.night .logos img {
     filter: grayscale();
 }
