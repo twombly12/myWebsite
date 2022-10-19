@@ -17,6 +17,22 @@ function toggleMobileMenu() {
     hamburger.classList.toggle('open')
 }
 document.getElementById('hamburger').addEventListener('click', toggleMobileMenu)
+    /* ----------------------------------------------- Main Menu Current Page ----------------------------------------------- */
+function activePage() {
+    let currentPage = window.location.href;
+    let menuLinks = document.querySelectorAll('#main-menu li a')
+    menuLinks.forEach(element => {
+
+        console.log(currentPage)
+
+        element.classList.remove('active')
+        if (element.href === currentPage) {
+            element.classList.add('active')
+        }
+    })
+
+}
+activePage()
     /* ----------------------------------------------- Dark Mode ----------------------------------------------- */
 function darkMode() {
     let isChecked = document.querySelector('.switch input').checked

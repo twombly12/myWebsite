@@ -11,15 +11,17 @@ function head() {
 }
 const menuLinks = {
     'services': `
+            <li><a href="/">Home</a></li>
             <li><a href="/websites.html">Websites</a></li>
-            <li><a href="">Web Apps</a></li>
+            <li><a href="/webapps.html">Web Apps</a></li>
             <li><a href="/logos.html">Logos</a></li>
-            <li><a href="">Testimonials</a></li>
+            
         `,
 
     'info': `
-            <li><a class="active" href="">About</a></li>
-            <li><a href="">Blog</a></li>
+            <li><a href="/testimonials.html">Testimonials</a></li>
+            <li><a class="active" href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
                     `,
 }
