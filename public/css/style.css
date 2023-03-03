@@ -651,7 +651,6 @@ nav.menu .active::after {
 
 footer {
     background: rgb(0 0 0 / 1.0);
-    margin-top: 4%;
 }
 
 .footer-content {
@@ -799,31 +798,15 @@ input:checked+.slider:before {
 
 .landing {
     height: 80vh;
-    /* background: rgb(81 0 255 / 1); */
     background: radial-gradient(at calc(50% + 400px), rgb(81 0 255 / 1) 0%, #200066 100%);
     position: relative;
     display: flex;
     align-items: center;
-    /* margin-bottom: -80px; */
-    /* clip-path: ellipse(85% 55% at 50% 44%); */
     clip-path: polygon(-1px -1px, 100% -1px, 100% 85%, 50% 100%, -1px 85%);
-    /* clip-path: polygon(-1px -1px, 100% -1px, 100% 60%, 0 100%); */
-    /* clip-path: polygon(100% 0%, 0% 0% , 0% 65%, 1% 64.95%, 2% 64.8%, 3% 64.6%, 4% 64.3%, 5% 63.9%, 6% 63.45%, 7% 62.9%, 8% 62.25%, 9% 61.55%, 10% 60.8%, 11% 59.95%, 12% 59.05%, 13% 58.1%, 14% 57.1%, 15% 56.05%, 16% 55%, 17% 53.9%, 18% 52.8%, 19% 51.65%, 20% 50.5%, 21% 49.35%, 22% 48.2%, 23% 47.05%, 24% 45.9%, 25% 44.8%, 26% 43.75%, 27% 42.75%, 28% 41.75%, 29% 40.8%, 30% 39.9%, 31% 39.1%, 32% 38.35%, 33% 37.65%, 34% 37.05%, 35% 36.5%, 36% 36.05%, 37% 35.65%, 38% 35.35%, 39% 35.15%, 40% 35.05%, 41% 35%, 42% 35.05%, 43% 35.2%, 44% 35.45%, 45% 35.75%, 46% 36.15%, 47% 36.65%, 48% 37.2%, 49% 37.85%, 50% 38.55%, 51% 39.35%, 52% 40.2%, 53% 41.1%, 54% 42.05%, 55% 43.05%, 56% 44.1%, 57% 45.15%, 58% 46.3%, 59% 47.4%, 60% 48.55%, 61% 49.7%, 62% 50.85%, 63% 52%, 64% 53.15%, 65% 54.25%, 66% 55.35%, 67% 56.4%, 68% 57.45%, 69% 58.4%, 70% 59.35%, 71% 60.2%, 72% 61.05%, 73% 61.8%, 74% 62.45%, 75% 63.05%, 76% 63.6%, 77% 64.05%, 78% 64.4%, 79% 64.7%, 80% 64.85%, 81% 65%, 82% 65%, 83% 64.9%, 84% 64.75%, 85% 64.5%, 86% 64.2%, 87% 63.75%, 88% 63.25%, 89% 62.7%, 90% 62.05%, 91% 61.3%, 92% 60.5%, 93% 59.65%, 94% 58.75%, 95% 57.8%, 96% 56.8%, 97% 55.75%, 98% 54.65%, 99% 53.55%, 100% 52.4%); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-
-
-/* .landing svg {
-        position: absolute;
-        top: 20%;
-        left: 0;
-        width: 100%;
-        -webkit-transform: scaleX(-1);
-        -ms-transform: scaleX(-1);
-        transform: scaleX(-1);
-    } */
 
 .landing::after,
 .landing::before {
@@ -835,7 +818,17 @@ input:checked+.slider:before {
     left: 0;
 }
 
-.landing::after {
+
+/* ------------------------- Testing Design Ideas ----------- */
+
+
+/* ------------------------- Testing Design Ideas ----------- */
+
+
+/* ------------------------- Testing Design Ideas ----------- */
+
+
+/* .landing::after {
     background: radial-gradient(at calc(50%), rgb(81 0 255 / 1) 0%, #200066 100%);
     opacity: 0.86;
 }
@@ -843,11 +836,94 @@ input:checked+.slider:before {
 .landing::before {
     background: black;
     mix-blend-mode: saturation;
-}
+} */
 
 .home {
     background-image: url('../assets/photo-collage-strip-effect-mockup_117023-2473.jpg');
+    background-image: url('../assets/ideas/ai-images/astronaut edit.png');
 }
+
+.content {
+    flex-direction: row !important;
+}
+
+.content img {
+    opacity: 0;
+}
+
+.smoke {
+    position: absolute;
+    height: 1000px;
+    width: 100%;
+    top: 66vh;
+    background-image: url('../assets/ideas/rocket-smoke-2.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -10;
+}
+
+
+/* .smoke::after {
+    content: "";
+    position: absolute;
+    height: 88vh;
+    width: 10px;
+    background: rgb(245 245 245 / 1);
+    top: 0;
+    left: calc(50% - 4px);
+} */
+
+.smoke.bottom {
+    bottom: 0;
+    top: calc(100% - 800px);
+    transform: rotate(180deg);
+}
+
+
+/* .smoke.bottom::after {
+    height: 0;
+    display: none;
+} */
+
+#testimonials {
+    background: none;
+}
+
+#testimonials::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(250 250 250 / 1);
+    z-index: -2;
+}
+
+#testimonials::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url('../assets/ideas/rocket-smoke-2.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+
+
+/* ------------------------- Testing Design Ideas ----------- */
+
+
+/* ------------------------- Testing Design Ideas ----------- */
+
+
+/* ------------------------- Testing Design Ideas ----------- */
 
 .stripe {
     position: absolute;
@@ -879,11 +955,14 @@ input:checked+.slider:before {
 #roles {
     color: #FFF;
     font-size: 4.4rem;
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     margin-left: 6px;
     margin-top: 30px;
     display: block;
     margin-bottom: 40px;
+    font-weight: 600;
+    text-transform: catpitalize;
+    color: rgb(168 128 255 / 1)
 }
 
 .landing .button {
@@ -1217,6 +1296,10 @@ input:checked+.slider:before {
 
 /* ------------------------------------------------- Client Logos ------------------------------------------------- */
 
+#logos {
+    z-index: -2;
+}
+
 #logos>div {
     margin-top: 60px;
     display: flex;
@@ -1268,6 +1351,7 @@ input:checked+.slider:before {
 
 #testimonials {
     margin: -23px 0 0 0;
+    padding-bottom: 4%;
 }
 
 #testimonials .seeMore {
@@ -1319,6 +1403,7 @@ input:checked+.slider:before {
     border: 2px solid rgb(0 0 0 / 1.0);
     border-bottom: none;
     line-height: 1.4;
+    background: #FFF;
 }
 
 #testimonial-content p::after,
@@ -1347,7 +1432,7 @@ input:checked+.slider:before {
     height: 37px;
     width: 37px;
     border: 2px solid rgb(0 0 0 / 1.0);
-    /* background: rgb(0 0 0 / 1.0); */
+    background: #FFF;
     border-top: none;
     border-left: none;
 }
