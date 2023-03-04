@@ -443,14 +443,10 @@ body *::selection {
 .seeMore {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     width: 100%;
     margin-top: 80px;
     text-align: right;
-}
-
-.seeMore.right {
-    justify-content: end;
 }
 
 .seeMore::before {
@@ -1238,7 +1234,7 @@ input:checked+.slider:before {
     height: 100%;
     margin-top: 40px;
     grid-gap: 40px;
-    padding-left: 50px;
+    padding-left: 20px;
 }
 
 #webApp-selector {
@@ -1323,7 +1319,7 @@ input:checked+.slider:before {
 }
 
 #webApp-image {
-    flex: 0 0 75%;
+    flex: 0 0 72%;
     overflow: hidden;
     padding: 16px;
     border-radius: 8px;
