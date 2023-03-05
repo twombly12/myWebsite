@@ -46,7 +46,7 @@ function header() {
         <!--- Mobile -->
         <nav id="mobile-menu" class="menu">
             <div>
-                <img class="logo" src="https://d33wubrfki0l68.cloudfront.net/f525bebad8ec45967899542ab37f9756287e1bbf/b31d2/images/logo-light-desktop.png" href="#" alt="Dash Interactive Logo" />
+                <img class="logo" src="/assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" />
                 <span id="hamburger"><span id="toggle"></span></span>
                 <ul class="main-menu">
                     ${menuLinks.services}
