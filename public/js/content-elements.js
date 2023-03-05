@@ -37,9 +37,11 @@ function header() {
                     ${menuLinks.info}
                     <label class="switch">
                         <input type="checkbox" value="on">
-                        <span class="slider round"></span>
+                        <span class="material-symbols-outlined">light_mode</span>
+                        <span class="slider round"></span>  
+                        <span class="material-symbols-outlined">dark_mode</span>                        
                     </label>
-                    <span class="material-symbols-outlined">light_mode</span>
+                    
                 </ul>
             </div>
         </nav>
