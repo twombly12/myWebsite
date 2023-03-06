@@ -1824,12 +1824,7 @@ body.night,
 
 #test svg {
     width: 100px;
+    height: 100px;
     fill-opacity: 100%;
+    fill: #000;
 }
-
-#test svg path {
-    stroke-dashoffset: 210;
-    stroke-dasharray: 210;
-}
-
-@keyframes draw {}
