@@ -245,7 +245,7 @@ form label {
 
 .section {
     max-width: 1200px;
-    margin: 0 10%;
+    margin: 0 auto;
 }
 
 .section.top {
@@ -1804,7 +1804,7 @@ body.night,
 }
 
 
-/* ----------------------------------- Media Queries for 1600 Width ----------------------------------- */
+/* ----------------------------------- Media Queries for 1250 Width ----------------------------------- */
 
 @media only screen and (max-width: 1250px) {
     html {
@@ -1813,4 +1813,23 @@ body.night,
     .three-column>div {
         flex: 0 0 calc(50% - 40px);
     }
+    .section {
+        max-width: 100%;
+        margin: 0 10%;
+    }
 }
+
+
+/* ----------------------------------- SVG Animate Tests ----------------------------------- */
+
+#test svg {
+    width: 100px;
+    fill-opacity: 100%;
+}
+
+#test svg path {
+    stroke-dashoffset: 210;
+    stroke-dasharray: 210;
+}
+
+@keyframes draw {}
