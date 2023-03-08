@@ -766,9 +766,9 @@ footer {
 .switch {
     position: relative;
     display: inline-block;
-    width: 44px;
-    height: 22px;
-    margin-left: 30px;
+    width: 54px;
+    height: 28px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -784,6 +784,10 @@ footer {
 
 .slider {
     position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     top: 0;
     left: 0;
@@ -792,19 +796,20 @@ footer {
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    padding: 0 6px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px;
-    width: 20px;
-    left: 0px;
+    height: 22px;
+    width: 22px;
+    left: 4px;
     top: 50%;
     transform: translate(0%, -50%);
     background-color: white;
     -webkit-transition: .4s;
-    transition: .4s;
+    transition: .2s;
 }
 
 input:checked+.slider {
@@ -819,7 +824,7 @@ input:focus+.slider {
 input:checked+.slider:before {
     /* -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px); */
-    left: 18px;
+    left: 28px;
 }
 
 .slider.round {
@@ -832,6 +837,11 @@ input:checked+.slider:before {
 
 .material-symbols-outlined {
     color: #FFF;
+}
+
+.slider span {
+    font-size: 18px;
+    user-select: none;
 }
 
 

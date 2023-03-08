@@ -41,20 +41,56 @@ function activePage() {
 activePage()
     /* ----------------------------------------------- Dark Mode ----------------------------------------------- */
 function darkMode() {
-    let isChecked = document.querySelector('.switch input').checked
-    let elements = document.querySelectorAll('.day')
-    if (isChecked) {
-        elements.forEach(element => {
+    // Get all switches
+    const isChecked = document.querySelectorAll('.switch input')
+
+    // Convert switches to Array
+    const ischeckedArray = Array.from(isChecked)
+
+    // Get all switch Id's
+    const toggleIds = ischeckedArray.map(element => {
+        return element.id
+    })
+
+    // Find index of clicked switch Id
+    const toggleClicked = toggleIds.findIndex(element => element == this.id)
+
+    // Remove clicked switch from Array
+    toggleIds.splice(toggleClicked, 1)
+
+    const pageElements = document.querySelectorAll('.day')
+    if (this.checked == true) {
+        // Toggle non-clicked switches as well
+        toggleIds.forEach(element => {
+                const uncheckedSwitch = document.querySelector(`input#${element}`)
+                uncheckedSwitch.checked = true
+
+            })
+            // Add dark mode
+        pageElements.forEach(element => {
             element.classList.add('night')
         })
+
     } else {
-        elements.forEach(element => {
+        // Toggle non-clicked switches as well
+        toggleIds.forEach(element => {
+                const uncheckedSwitch = document.querySelector(`input#${element}`)
+                uncheckedSwitch.checked = false
+
+            })
+            // remove dark mode
+        pageElements.forEach(element => {
             element.classList.remove('night')
         })
     }
 }
-document.querySelector('.switch').addEventListener('click', darkMode);
-/* ----------------------------------------------- Slider ----------------------------------------------- */
+
+const darkModeListener = (() => {
+        document.querySelectorAll('.switch input').forEach(element => {
+            element.addEventListener('click', darkMode);
+        })
+    })()
+    /* ----------------------------------------------- Slider ----------------------------------------------- */
 function moveSlider() {
     let dots = document.querySelectorAll('.slider-dot-control')
     dots.forEach(element => {

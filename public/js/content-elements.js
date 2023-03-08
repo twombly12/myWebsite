@@ -36,10 +36,10 @@ function header() {
                     ${menuLinks.services}
                     ${menuLinks.info}
                     <label class="switch">
-                        <input type="checkbox" value="on">
-                        <span class="material-symbols-outlined">light_mode</span>
-                        <span class="slider round"></span>  
-                        <span class="material-symbols-outlined">dark_mode</span>                        
+                        <input id='main-toggle' type="checkbox" value="on">
+                        
+                        <span class="slider round"> <span class="material-symbols-outlined">light_mode</span>   <span class="material-symbols-outlined">dark_mode</span> </span>  
+                                              
                     </label>
                     
                 </ul>
@@ -55,10 +55,11 @@ function header() {
                     ${menuLinks.info}
 
                     <label class="switch">
-                        <input type="checkbox" value="on">
-                        <span class="slider round"></span>
+                        <input id='mobile-toggle' type="checkbox" value="on">
+                        
+                        <span class="slider round"> <span class="material-symbols-outlined">light_mode</span>   <span class="material-symbols-outlined">dark_mode</span> </span>  
+                                              
                     </label>
-                    <span class="material-symbols-outlined">light_mode</span>
                 </ul>
             </div>
         </nav>
@@ -84,11 +85,12 @@ function footer() {
             </div>
             <div class="section footer-content">
                 <div>
-                    <label class="switch">
-                            <input type="checkbox" value="on">
-                            <span class="slider round"></span>
-                        </label>
-                    <span class="material-symbols-outlined">light_mode</span>
+                <label class="switch">
+                <input id='footer-toggle' type="checkbox" value="on">
+                
+                <span class="slider round"> <span class="material-symbols-outlined">light_mode</span>   <span class="material-symbols-outlined">dark_mode</span> </span>  
+                                      
+            </label>
                 </div>
                 <div>
                     <h3>Services</h3>
