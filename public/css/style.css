@@ -600,6 +600,7 @@ nav.menu .active::after {
         widtH: 30px;
         height: 30px;
         z-index: 1;
+        cursor: pointer;
     }
     #hamburger #toggle,
     #hamburger #toggle::after,
@@ -854,7 +855,7 @@ input:checked+.slider:before {
     display: flex;
     align-items: center;
     justify-content: center;
-    clip-path: polygon(-1px -1px, 100% -1px, 100% 85%, 50% 100%, -1px 85%);
+    clip-path: polygon(-1px -1px, 100% -1px, 100% 86%, 50% 100%, -1px 86%);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -1367,14 +1368,15 @@ input:checked+.slider:before {
     padding-top: 4px;
     flex: 0 0 calc((100%/8) - 10px);
     width: calc((100%/8) - 10px);
-    border-radius: 6px;
+    border-radius: 8px;
+    background: rgb(255 255 255 / 0.8);
 }
 
 .logoList span::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -2px;
     height: 100%;
     width: 100%;
     border-radius: 10px;
@@ -1681,6 +1683,7 @@ form textarea {
     border: 1px solid rgb(225 225 225 / 1);
     padding: 30px;
     border-radius: 10px;
+    background: rgb(255 255 255 / 1);
 }
 
 
@@ -1688,6 +1691,10 @@ form textarea {
 
 .night *:not(.dark-color-text):not(.light-color-text) {
     color: #FFF;
+}
+
+.night .dark-color-text {
+    color: rgb(168 128 255 / 1);
 }
 
 #about.night>div>div h3,
@@ -1714,11 +1721,13 @@ body.night,
 }
 
 .night .landing::after {
-    background: radial-gradient(at calc(50% + 400px), rgb(28, 28, 28) 0%, rgb(8, 8, 8) 100%);
+    background: radial-gradient(at calc(50% + 400px), rgb(8 8 8 / 0.0) 0%, rgb(8 8 8 / 0.25) 100%);
 }
 
 .night .button,
-.night .stripe {
+.night .stripe,
+.night .seeMore::before,
+.night .seeMore::after {
     background: rgb(81 0 255 / 1);
 }
 
@@ -1742,7 +1751,6 @@ body.night,
 .night #testimonial-content p {
     box-shadow: 0 0 12px 0px rgb(81 0 255), inset 0 0 8px 0px rgb(81 0 255);
     border: 2px solid rgb(81 0 255 / 1);
-    border-bottom: none;
 }
 
 .night #testimonial-content p::before,
@@ -1753,7 +1761,7 @@ body.night,
 }
 
 .night #testimonial-content p .arrow {
-    box-shadow: 4px 4px 12px -1px rgb(81 0 255), inset -5px -5px 6px -1px rgb(81 0 255);
+    box-shadow: 4px 4px 10px -4px rgb(81 0 255), inset -5px -5px 10px -10px rgb(81 0 255);
     border: 2px solid rgb(81 0 255 / 1);
     border-left: none;
     border-top: none;
@@ -1796,13 +1804,14 @@ body.night,
     background: rgb(12 12 12);
 }
 
-.night .logoList img {
+
+/* .night .logoList img {
     filter: grayscale();
 }
 
 .night .logos img {
     filter: grayscale();
-}
+} */
 
 
 /* ----------------------------------- Media Queries for 1600 Width ----------------------------------- */
