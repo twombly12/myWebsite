@@ -133,6 +133,10 @@ body {
     overflow-y: scroll;
 }
 
+body.active {
+    overflow: hidden;
+}
+
 body,
 #testimonials {
     background: rgb(245 245 245 / 1);
@@ -252,6 +256,10 @@ form label {
     margin-top: 8%;
 }
 
+.section.bottom {
+    margin-bottom: 8%;
+}
+
 .text-image img {
     object-fit: cover;
     width: 100%;
@@ -285,11 +293,7 @@ form label {
 
 .shadowed-box {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    /*border: 1px solid rgb(225 225 225 / 1);
-    padding: 30px;
-    border-radius: 10px; */
-    /* border: 3px solid rgb(235 235 235 / 1.0); */
-    border: 2px solid rgb(0 0 0 / 1.0);
+    border: 2px solid rgb(230 230 230 / 1.0);
     background: #FFF;
     padding: 30px;
     border-radius: 8px;
@@ -378,7 +382,6 @@ body *::selection {
     color: #FFF;
     font-size: 2rem;
     font-weight: 600;
-    /* letter-spacing: 2px; */
     text-decoration: none;
     padding: 16px 32px;
     width: max-content;
@@ -626,7 +629,6 @@ nav.menu .active::after {
     #hamburger #toggle::before {
         bottom: -10px;
     }
-    /**/
     #hamburger.open #toggle {
         top: 0;
         transform: rotate(90deg);
@@ -869,6 +871,11 @@ input:checked+.slider:before {
     width: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
+}
+
+.landing::before {
+    background: linear-gradient(rgb(0 0 0 / 0.5), rgb(0 0 0 / 0))
 }
 
 .home {
@@ -886,41 +893,25 @@ input:checked+.slider:before {
 
 .smoke {
     position: absolute;
-    height: 1000px;
+    height: 800px;
     width: 100%;
-    top: 66vh;
-    background-image: url('../assets/ideas/rocket-smoke-2.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    top: 74vh;
     z-index: -10;
+    overflow: hidden;
 }
 
-
-/* .smoke::after {
-    content: "";
-    position: absolute;
-    height: 88vh;
-    width: 10px;
-    background: rgb(245 245 245 / 1);
-    top: 0;
-    left: calc(50% - 4px);
-} */
-
-.smoke.bottom {
-    bottom: 0;
-    top: calc(100% - 800px);
-    transform: rotate(180deg);
+.sub-landing+.smoke {
+    top: 36vh;
 }
 
-
-/* .smoke.bottom::after {
-    height: 0;
-    display: none;
-} */
+.smoke svg {
+    width: 100%;
+    display: block;
+}
 
 #testimonials {
     background: none;
+    position: relative
 }
 
 #testimonials::before {
@@ -933,30 +924,6 @@ input:checked+.slider:before {
     background: rgb(245 245 245 / 1);
     z-index: -2;
 }
-
-#testimonials::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-image: url('../assets/ideas/rocket-smoke-2.png');
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-    transform: rotate(180deg);
-}
-
-
-/* ------------------------- Testing Design Ideas ----------- */
-
-
-/* ------------------------- Testing Design Ideas ----------- */
-
-
-/* ------------------------- Testing Design Ideas ----------- */
 
 .stripe {
     position: absolute;
@@ -1030,39 +997,6 @@ input:checked+.slider:before {
     transition: 0.3s ease all;
 }
 
-
-/* .website-feature::after {
-    content: "";
-    position: absolute;
-    z-index: 99;
-    border-radius: 100px;
-    width: 80px;
-    height: 80px;
-    background: #FFF;
-    border: 2px solid black;
-}
-
-.website-feature:nth-child(1)::after {
-    right: -59px;
-    bottom: -59px;
-}
-
-.website-feature:nth-child(2)::after {
-    left: -59px;
-    bottom: -59px;
-}
-
-.website-feature:nth-child(3)::after {
-    left: -69px;
-    bottom: -69px;
-}
-
-.website-feature:last-child::after {
-    left: 50%;
-    top: -60px;
-    transform: translate(-50%, 0);
-} */
-
 .websites-image {
     position: relative;
     height: 100%;
@@ -1071,8 +1005,8 @@ input:checked+.slider:before {
     border-radius: 8px;
 }
 
-.website-feature img {
-    width: 102%;
+.websites-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
@@ -1153,72 +1087,6 @@ input:checked+.slider:before {
 }
 
 
-/* .circle-graphic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: none;
-}
-
-.circle-graphic::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #FFF;
-    z-index: 99;
-}
-
-.website-feature:nth-child(even) .circle-graphic::before {
-    clip-path: circle(50px at calc(0% - 15px) calc(100% + 15px));
-}
-
-.website-feature:nth-child(odd) .circle-graphic::before {
-    clip-path: circle(50px at calc(100% + 15px) calc(100% + 15px));
-}
-
-.website-feature:last-child .circle-graphic::before {
-    clip-path: circle(50px at 50% calc(0% - 15px));
-}
-
-.circle-graphic::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #FFF;
-    z-index: 99;
-}
-
-.website-feature:nth-child(even) .circle-graphic::after {
-    clip-path: circle(50px at calc(0% - 15px) calc(0% - 15px));
-}
-
-.website-feature:nth-child(odd) .circle-graphic::after {
-    clip-path: circle(50px at calc(100% + 15px) calc(0% - 15px));
-}
-
-.website-feature:last-child .circle-graphic::after,
-.website-feature:first-child .circle-graphic::after,
-.website-feature:nth-child(2) .circle-graphic::after {
-    display: none;
-}
-
-.circle-graphic:first-child {
-    top: calc(300px - 35px);
-}
-
-.circle-graphic:nth-child(2) {
-    top: calc(600px - 10px);
-} */
-
-
 /* ------------------------------------------------- Web Apps ------------------------------------------------- */
 
 .webApp-container {
@@ -1235,7 +1103,6 @@ input:checked+.slider:before {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: stretch; */
     margin: 4% 0;
 }
 
@@ -1265,7 +1132,6 @@ input:checked+.slider:before {
     opacity: 1;
     max-height: 150px;
     transition: 0.5s ease all;
-    /* padding-top: 14px; */
 }
 
 #webApp-selector::before {
@@ -1446,8 +1312,8 @@ input:checked+.slider:before {
 
 #testimonial-content p {
     padding: 50px 100px;
-    border: 2px solid rgb(0 0 0 / 1.0);
-    /* border-bottom: none; */
+    border: 2px solid rgb(230 230 230 / 1.0);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     line-height: 1.4;
     background: #FFF;
     border-radius: 8px;
@@ -1460,10 +1326,11 @@ input:checked+.slider:before {
     transform: translate(-50%, 0) rotate(45deg);
     height: 37px;
     width: 37px;
-    border: 2px solid rgb(0 0 0 / 1.0);
+    border: 2px solid rgb(230 230 230 / 1.0);
     background: #FFF;
     border-top: none;
     border-left: none;
+    box-shadow: 4px 4px 10px -4px rgba(100, 100, 111, 0.2), inset -5px -5px 10px -10px rgba(100, 100, 111, 0.2);
 }
 
 #testimonial-content>div span {
@@ -1491,13 +1358,17 @@ input:checked+.slider:before {
     padding-top: 8vh;
 }
 
+.landing.sub-landing::before {
+    background: linear-gradient(rgb(0 0 0 / 0.75), rgb(0 0 0 / 0))
+}
+
 .stripe.sub-landing {
     margin-top: calc(-40vh + 18px);
     height: 40vh;
 }
 
 .landing.sub-landing.contact-background {
-    background-image: url('../assets/photo-collage-strip-effect-mockup_117023-2473.jpg');
+    background-image: url('../assets/ideas/ai-images/Rocket launch cropped.jpg');
 }
 
 
@@ -1613,6 +1484,74 @@ input:checked+.slider:before {
 }
 
 
+/* ------------------------------------------------- Websites Page ------------------------------------------------- */
+
+.website-feature.web-page {
+    height: 400px;
+    cursor: zoom-in;
+}
+
+.web-page img {
+    object-position: top;
+    transition: 10s;
+}
+
+.web-page:hover img {
+    object-position: bottom;
+}
+
+.websites-content .web-page:last-child {
+    flex: 0 0 calc(50% - 15px);
+}
+
+#image-lightbox {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding: 10vh 0;
+    top: 0;
+    left: 0;
+    background: rgb( 0 0 0 / 0.6);
+    margin: 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    z-index: 9999;
+}
+
+#image-lightbox.active {
+    display: flex;
+}
+
+#image-display {
+    height: max-content;
+    width: 80vw;
+    max-width: 1400px;
+    margin: auto;
+    padding: 60px;
+    background: black;
+}
+
+#image-display img {
+    width: 100%;
+}
+
+#image-lightbox .material-symbols-outlined {
+    font-size: 40px;
+    color: #FFF;
+    top: 20px;
+    right: 20px;
+    position: absolute;
+    transition: 0.3s ease all;
+    cursor: pointer;
+}
+
+#image-lightbox .material-symbols-outlined:hover {
+    color: rgb(168 128 255 / 1);
+}
+
+
 /* ------------------------------------------------- Contact Page ------------------------------------------------- */
 
 .form-container {
@@ -1703,11 +1642,11 @@ form textarea {
 }
 
 body.night,
-.night #testimonials,
+.night #testimonials::before,
 .night #webApp-selector .active h4::after,
 .night #about>div>div,
 .night .webApp-content.active {
-    background: rgb(12, 12, 12);
+    background: rgb(16 16 16 / 1);
 }
 
 .night #main-menu.sticky,
@@ -1721,7 +1660,7 @@ body.night,
 }
 
 .night .landing::after {
-    background: radial-gradient(at calc(50% + 400px), rgb(8 8 8 / 0.0) 0%, rgb(8 8 8 / 0.25) 100%);
+    background: radial-gradient(at calc(50% + 400px), rgb(8 8 8 / 0.1) 0%, rgb(8 8 8 / 0.4) 100%);
 }
 
 .night .button,
@@ -1732,7 +1671,7 @@ body.night,
 }
 
 .night .logoList::after {
-    background: radial-gradient(circle, rgb( 12 12 12 / 0) 0%, rgb(12 12 12 / 1) 90%);
+    background: radial-gradient(circle, rgb( 16 16 16 / 0) 0%, rgb(16 16 16 / 1) 90%);
 }
 
 .night #webApp-selector :not(.active) h4::before {
@@ -1773,7 +1712,7 @@ body.night,
 }
 
 .night .seeMore .button {
-    border-color: rgb(12, 12, 12);
+    border-color: rgb(16 16 16 / 1);
 }
 
 .night .slider-dot-control,
@@ -1801,7 +1740,15 @@ body.night,
 
 .night .circle-graphic::before,
 .night .circle-graphic::after {
-    background: rgb(12 12 12);
+    background: rgb(16 16 16);
+}
+
+.night .smoke .st90 {
+    fill: rgb( 0 0 0/1);
+}
+
+.night .smoke .st71 {
+    fill: rgb( 10 10 10/1);
 }
 
 
@@ -1836,14 +1783,4 @@ body.night,
         max-width: 100%;
         margin: 0 10%;
     }
-}
-
-
-/* ----------------------------------- SVG Animate Tests ----------------------------------- */
-
-#test svg {
-    width: 100px;
-    height: 100px;
-    fill-opacity: 100%;
-    fill: #000;
 }

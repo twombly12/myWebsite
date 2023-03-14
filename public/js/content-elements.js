@@ -71,6 +71,7 @@ function header() {
 function footer() {
     let footer = document.querySelector('footer')
     footer.innerHTML = `
+    
     <div id="action">
                 <div class="section">
                     <a href="/" class="logo"><img src="/assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" /></a>
