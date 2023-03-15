@@ -263,6 +263,7 @@ form label {
 .text-image img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 
 .two-column {
@@ -435,6 +436,11 @@ body *::selection {
 .button.color::before,
 .button.color::after {
     border-color: rgb(81 0 255 / 1);
+}
+
+#testimonials .button.color::before,
+#testimonials .button.color::after {
+    border-color: rgb(0 0 0 / 1);
 }
 
 .seeMore .button {
@@ -1140,7 +1146,7 @@ input:checked+.slider:before {
     top: 50%;
     transform: translate(0, -50%);
     left: 0;
-    height: 92%;
+    height: 90%;
     width: 2px;
     background: rgb(0 0 0 / 1.0);
     z-index: -2;
@@ -1231,11 +1237,11 @@ input:checked+.slider:before {
 }
 
 .logoList span {
-    padding-top: 4px;
     flex: 0 0 calc((100%/8) - 10px);
     width: calc((100%/8) - 10px);
     border-radius: 8px;
     background: rgb(255 255 255 / 0.8);
+    overflow: hidden;
 }
 
 .logoList span::after {
@@ -1251,7 +1257,9 @@ input:checked+.slider:before {
 }
 
 .logoList img {
-    width: calc(100%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .logoList span:nth-child(2n+1) {
@@ -1567,7 +1575,6 @@ input:checked+.slider:before {
     flex-direction: column;
     width: 100%;
     justify-content: center;
-    margin-top: 40px;
 }
 
 .form-input {
@@ -1620,7 +1627,7 @@ form textarea {
     width: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: 1px solid rgb(225 225 225 / 1);
-    padding: 30px;
+    /* padding: 30px; */
     border-radius: 10px;
     background: rgb(255 255 255 / 1);
 }
@@ -1725,8 +1732,14 @@ a .night #testimonial-content p {
 }
 
 .night #webApp-selector .active h4::after {
-    border-width: 2px;
-    left: -28px;
+    border-width: 1px;
+}
+
+.night #webApp-selector h4::before {
+    top: 13px;
+    left: -25px;
+    height: 11.5px;
+    width: 11.5px;
 }
 
 .night #about>div>div,
