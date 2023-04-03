@@ -168,6 +168,8 @@ table {
 * {
     box-sizing: border-box;
     position: relative;
+    scroll-margin-top: 120px;
+    scroll-behavior: smooth;
 }
 
 
@@ -298,6 +300,47 @@ form label {
     background: #FFF;
     padding: 30px;
     border-radius: 8px;
+}
+
+
+/* ----- Circle between 2 containers style ---- */
+
+.column-circle {
+    grid-gap: 10px;
+}
+
+.column-circle>div {
+    position: relative;
+    grid-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.column-circle>div:first-child::after,
+.column-circle>div:first-child::before {
+    content: "";
+    position: absolute;
+    border-radius: 40px;
+    right: -31px;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 99;
+}
+
+.column-circle>div:first-child::after {
+    height: 47px;
+    width: 47px;
+    border: 1px solid rgb(225 225 225 / 1);
+}
+
+.column-circle>div:first-child::before {
+    height: 30px;
+    width: 30px;
+    background: #FFF;
+    border: 10px solid rgb(240 240 240 / 1);
 }
 
 
@@ -1796,8 +1839,17 @@ a .night #testimonial-content p {
     .three-column>div {
         flex: 0 0 calc(50% - 40px);
     }
+    .two-column {
+        grid-template-columns: 1fr;
+    }
     .section {
         max-width: 100%;
         margin: 0 10%;
+    }
+    .column-circle>div:first-child::after,
+    .column-circle>div:first-child::before {
+        right: 50%;
+        top: 100%;
+        transform: translate(50%, -50%);
     }
 }
