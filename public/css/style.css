@@ -10,9 +10,6 @@
 /* ---- */
 
 
-/* ------- Replace Purple (cd git   cd g) with Green (57 181 74) ---- */
-
-
 /* ---- */
 
 
@@ -170,6 +167,10 @@ table {
     position: relative;
     scroll-margin-top: 120px;
     scroll-behavior: smooth;
+}
+
+a {
+    cursor: pointer;
 }
 
 
@@ -587,6 +588,103 @@ nav.menu .active::after {
     background: rgb(168 128 255 / 1);
     border-radius: 10px;
 }
+
+
+/* ------------------------------------------------- Main Menu Drop Down ------------------------------------------------- */
+
+nav.menu .dropdown-content {
+    position: absolute;
+    background: rgb( 16 16 16 / 1);
+    z-index: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* border: 2px solid rgb(255 255 255 / 0.2); */
+    display: none;
+    width: max-content;
+    top: 34px;
+    padding: 16px 20px;
+    border-radius: 12px;
+}
+
+nav.menu .dropdown-content,
+nav.menu .dropdown-content::after {
+    background: rgb( 20 20 20 / 1);
+}
+
+nav.menu .dropdown-content::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: -10px;
+    left: 22px;
+    rotate: 45deg;
+    border-radius: 4px;
+    z-index: -9999;
+    /* border-left: 2px solid rgb(255 255 255 / 0.2);
+    border-top: 2px solid rgb(255 255 255 / 0.2); */
+}
+
+nav.menu .dropdown-content::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -18px;
+    left: 0;
+    z-index: -2;
+}
+
+nav.menu .dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+nav.menu .dropdown-content .active::after {
+    display: none;
+}
+
+nav.menu .dropdown-content .active {
+    color: rgb(168 128 255 / 1);
+}
+
+nav.menu .dropdown-content ul {
+    width: max-content;
+    margin-bottom: 0;
+}
+
+nav.menu .dropdown-content ul li {
+    display: block;
+    padding: 16px 0;
+    border-bottom: 1px solid rgb( 255 255 255 / 0.2);
+}
+
+nav.menu .dropdown-content ul li:last-child {
+    border: none;
+}
+
+nav.menu .dropdown-content li a {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    padding: 0rem 0.6rem;
+    width: 100%;
+    display: inline-block;
+}
+
+
+/* nav.menu.sticky .dropdown-content,
+nav.menu.sticky .dropdown-content::after {
+    background: rgb(245 245 245 / 1);
+}
+
+nav.menu.sticky .dropdown-content li {
+    border-color: rgb(0 0 0/ 0.1);
+}
+
+nav.menu.sticky .dropdown-content li a {
+    color: #000;
+} */
 
 
 /* ------------------------------------------------- Mobile Menu ------------------------------------------------- */

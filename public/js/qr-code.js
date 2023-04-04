@@ -75,10 +75,19 @@ const onGenerateSubmit = (e) => {
                 canvas.width = size;
                 canvas.height = size;
 
+                // For Circle
+                // canvas.style.border = '8px solid red';
+                // canvas.style.margin = '60px';
+                // canvas.style.borderRadius = '300px';
+                // canvas.style.overflow = 'visible';
+
                 /-------------------------- Add QR Code to Canvas --------------------------/
                 let qrIMG = new Image();
                 const qrURL = qrGenerated.querySelector('img').src
                 qrIMG.src = qrURL
+                    // Circle
+                    // ctx.drawImage(qrIMG, (size / 2 - ((size - 60) / 2)), (size / 2 - ((size - 60) / 2)), (size - 60), (size - 60));
+                    // Square
                 ctx.drawImage(qrIMG, 0, 0);
 
                 /-------------------------- Resize Logo for Canvas --------------------------/

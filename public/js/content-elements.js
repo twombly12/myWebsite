@@ -13,7 +13,17 @@ const menuLinks = {
     'services': `
             <li><a href="/">Home</a></li>
             <li><a href="/websites.html">Websites</a></li>
-            <li><a href="/webapps.html">Web Apps</a></li>
+            <li class="dropdown">
+                <a href="/webapps.html">Web Apps</a>
+                <div class="dropdown-content">
+                    <ul>
+                        <li><a href="/email-signature-generator.html">Email Signature Generator</a></li>
+                        <li><a href="/qr-code-generator.html">QR Code Generator</a></li>
+                        <li><a href="/activity-tracker.html">Activity Tracker</a></li>
+                        <li><a href="/webapps.html">All</a></li>
+                    </ul>
+                </div>
+            </li>
             <li><a href="/logos.html">Logos</a></li>
             
         `,
