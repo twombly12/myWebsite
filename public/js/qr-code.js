@@ -49,6 +49,7 @@ const onGenerateSubmit = (e) => {
 
     if (e) {
         e.preventDefault();
+        document.querySelector('#qr-container').scrollIntoView()
     }
 
     clearUI()
@@ -113,7 +114,7 @@ const onGenerateSubmit = (e) => {
 
         }, 1000);
     }
-    document.querySelector('#qr-container').scrollIntoView()
+
 }
 
 /-------------------------- Clear QR Code -------------------------- /

@@ -209,7 +209,7 @@ const imageLightBox = (() => {
 
 
 /* ----------------------------------------------- Mouse Typing ----------------------------------------------- */
-const mosueTyping = (() => {
+const mouseTyping = (() => {
 
     const replaceSentence = document.getElementById('sentence')
     if (replaceSentence) {
