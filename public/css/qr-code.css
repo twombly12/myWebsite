@@ -37,6 +37,7 @@
 #qrForm input,
 #qrForm label.filewrap,
 #qrForm select {
+    padding: 0 20px;
     height: 44px;
     width: 100%;
     font-family: 'Montserrat', sans-serif;

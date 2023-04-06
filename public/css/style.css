@@ -169,7 +169,8 @@ table {
     scroll-behavior: smooth;
 }
 
-a {
+a,
+button {
     cursor: pointer;
 }
 
@@ -618,7 +619,7 @@ nav.menu .dropdown-content::after {
     position: absolute;
     height: 20px;
     width: 20px;
-    top: -10px;
+    top: -8px;
     left: 22px;
     rotate: 45deg;
     border-radius: 4px;
