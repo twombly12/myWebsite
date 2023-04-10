@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dash Interactive</title>
+    <script src="https://unpkg.com/merge-images"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- <link rel="stylesheet" href="../css/email-signature-generator.css">
+    <link rel="stylesheet" href="/css/style.css"> -->
+    <!-- <script src="/js/content-elements.js"></script> -->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+    <link rel="stylesheet" href="/css/email-signature-generator.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/content-elements.js"></script>
+    <script>
+        head()
+    </script>
+
+</head>
+
+<body class="day">
+    <header>
+        <script>
+            header()
+        </script>
+    </header>
+    <main class="">
+
+
+        <section class="landing sub-landing contact-background">
+            <div class="content section">
+                <h1>Our Websites <br></h1>
+            </div>
+        </section>
+        <div class="stripe sub-landing"></div>
+
+        <div class="smoke "></div>
+        <section class="section top bottom">
+            <h2 class="center-text">Get<span class="dark-color-text"> Started</span> Today</h2>
+            <div class="designSVG text-underline addSVG"></div>
+            <p class="center-text">QR Codes allow smartphone users to access your website simply and quickly.
+            </p>
+            <div class="shadowed-box white-background email-signature">
+                <h2 id="signature-preview" class="center-text">Preview</h2>
+                <canvas id="uploaded-img"></canvas>
+                <div id="signature-container"></div>
+                <div id="email-container" class="">
+                    <form id="emailInput" class="">
+
+                        <label id="portrait-name" class="filewrap" for="portrait-input">Upload Your Portrait (Optional)</label>
+                        <input id="portrait-input" class="img-submit" data-attribute="portrait" type="file" accept="image/*" placeholder="Upload your Logo">
+
+                        <!-- <div class="half-field portrait-radius">
+                            <label for="square-portrait">Square Portrait</label>
+                            <input type="checkbox" id="square-portrait" name="square-portrait" value="square-portrait" checked>
+                        </div>
+
+                        <div class="half-field portrait-radius">
+                            <label for="circle-portrait">Circle Portrait</label>
+                            <input type="checkbox" id="circle-portrait" name="circle-portrait" value="circle-portrait">
+                        </div> -->
+
+
+
+                        <label id="logo-name" class="filewrap" for="logo-input">Upload Your Company Logo</label>
+                        <input id="logo-input" class="img-submit" data-attribute="logo" type="file" accept="image/*" placeholder="Upload your Logo">
+                        <input class="third-field" type="text" id="signOff" placeholder="Sign Off" name="signOff" required="">
+                        <input class="third-field" type="text" id="name" placeholder="Full Name" name="name" required="">
+                        <input class="third-field" type="text" id="title" placeholder="Job Title" name="job-title" required="">
+                        <input type="tel" id="phoneNumber" placeholder="Phone Number" name="phone-number" required="" maxLength="10">
+                        <input class="half-field" type="text" id="emailAddress" placeholder="Email address" name="email-address" required="">
+                        <input class="half-field" type="text" id="website" placeholder="Website" name="website" required="">
+                        <input class="half-field" type="text" id="location" placeholder="Location" name="location" required="">
+                        <input type="text" id="quote" placeholder="Quote (Optional)" name="quote" required="">
+                        <input type="text" id="author" placeholder="Author (Optional)" name="author" required="">
+                        <input class="half-field" type="text" id="facebook" placeholder="Facebook (Optional)" name="facebook" required="">
+                        <input class="half-field" type="text" id="twitter" placeholder="Twitter (Optional)" name="twitter" required="">
+                        <input class="half-field" type="text" id="linkedIn" placeholder="LinkedIn (Optional)" name="linkedIn" required="">
+                        <input class="half-field" type="text" id="instagram" placeholder="Instagram (Optional)" name="instagram" required="">
+
+                    </form>
+                    <div class="form-buttons">
+                        <!-- <button id="submitInfo" class="btn neumorphic neumorphic-disabled" onclick="submitInfo()"> <span> Preview </span> </button> -->
+                        <!-- <button id="publishSignature" class="btn neumorphic neumorphic-disabled" onclick="publishSignature()"> <span> Publish </span> </button> -->
+                        <button id="previewSignature" class="button" type="submit">Preview</button>
+                        <button id="publishSignature" class="button" type="submit">Publish</button>
+                    </div>
+                </div>
+                <div id="popup-display" class="">
+                    <div id="popup-container" class="">
+                        <i class="far fa-times-circle" onclick="closePopup()"></i>
+                        <h2>Copy &amp; Paste</h2>
+                        <br>
+                        <p>Click the button below to copy the email signature</p>
+                        <p>Then paste it into the settings of your email</p>
+                        <br>
+                        <div id="popup-alignment">
+                            <div id="popup-code" class=""></div>
+                        </div>
+                        <button id="copyCode" class="tooltip button" onclick="copyCode()" onmouseout="outFunc()">
+                        <span class="tooltiptext" id="myTooltip">Copied to Clipboard</span>
+                        Click to copy
+                    </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <script src="script.js"></script>
+    </main>
+    <footer>
+        <script>
+            footer()
+        </script>
+    </footer>
+
+    <!-- <script src="/js/script.js"></script>
+    <script src="/js/svg.js"></script>
+    <script src="/js/email-signature-generator.js"></script> -->
+    <script src="/js/svg.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/email-signature-generator.js"></script>
+</body>
+
+</html>
