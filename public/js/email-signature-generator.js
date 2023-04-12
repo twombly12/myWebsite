@@ -22,6 +22,8 @@ let instagramInput = 'https://www.instagram.com';
 
 let logoInput = "/assets/Dash Logo Colours-purple.png"
 
+let colorInput = "rgb(81 0 255 / 1)"
+
 
 function phoneFormat(phone) {
     phone = phone.split('')
@@ -101,6 +103,8 @@ function submitInfo() {
     twitterInput = websitePrefix(document.querySelector('#twitter').value);
     linkedinInput = websitePrefix(document.querySelector('#linkedIn').value);
     instagramInput = websitePrefix(document.querySelector('#instagram').value);
+    colorInput = document.querySelector('#color-background-input').value
+
 
     previewSignature();
 }
@@ -163,7 +167,7 @@ function generateContactInfo() {
                 <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:30px;vertical-align:-webkit-baseline-middle">
                     <tbody style="box-sizing:border-box">
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
-                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:rgb(81 0 255 / 1)"><img src="https://ci6.googleusercontent.com/proxy/Xq3hntJEq2rjJzR0uWCVm3clsSla7NsI7xyRuy0B6esGxKEs0TJKSCBJd0PTJnw80_-gOm3yRwJoGtSWipm4TqjnmSCEllHm6WPq2oze68mmA8DO6Mj2dGBHroByKflVGCBL0c-wyQ3vCF92=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png" color="#f2547d" alt="mobilePhone" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
+                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:${colorInput}"><img src="https://ci6.googleusercontent.com/proxy/Xq3hntJEq2rjJzR0uWCVm3clsSla7NsI7xyRuy0B6esGxKEs0TJKSCBJd0PTJnw80_-gOm3yRwJoGtSWipm4TqjnmSCEllHm6WPq2oze68mmA8DO6Mj2dGBHroByKflVGCBL0c-wyQ3vCF92=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/phone-icon-2x.png" color="#f2547d" alt="mobilePhone" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -178,7 +182,7 @@ function generateContactInfo() {
                 <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:30px;vertical-align:-webkit-baseline-middle">
                     <tbody style="box-sizing:border-box">
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
-                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:rgb(81 0 255 / 1)"><img src="https://ci5.googleusercontent.com/proxy/u9Dqq8IRTYcA9pxGhij8X1100IBTEBNk6GfgLex2wy5mIUGt4EvtpI__1csTElV-MUMrqJCa2SjWZkRDmYNbTv260GIk6RQb8BWD6Fub4s38olgLolJ-Y0ZMzSkDaCxhCmOgByGso4GxlMz7=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png" color="#f2547d" alt="emailAddress" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
+                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:${colorInput}"><img src="https://ci5.googleusercontent.com/proxy/u9Dqq8IRTYcA9pxGhij8X1100IBTEBNk6GfgLex2wy5mIUGt4EvtpI__1csTElV-MUMrqJCa2SjWZkRDmYNbTv260GIk6RQb8BWD6Fub4s38olgLolJ-Y0ZMzSkDaCxhCmOgByGso4GxlMz7=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/email-icon-2x.png" color="#f2547d" alt="emailAddress" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -193,7 +197,7 @@ function generateContactInfo() {
                 <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:30px;vertical-align:-webkit-baseline-middle">
                     <tbody style="box-sizing:border-box">
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
-                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:rgb(81 0 255 / 1)"><img src="https://ci5.googleusercontent.com/proxy/bDGbdhNSZAZaKWHjXdHMW3DL3PklwLU9F5lSquHVukVuOVNDm_0LSPw8ckOtJwduaqdVOyJnATN5reUqPaX3QjUNCZkwbG2Ac8UdOzrywgI_nREPLk66UFxOhX3uiKMJOqLfWEBJyXQ51Tk=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png" color="#f2547d" alt="website" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
+                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:${colorInput}"><img src="https://ci5.googleusercontent.com/proxy/bDGbdhNSZAZaKWHjXdHMW3DL3PklwLU9F5lSquHVukVuOVNDm_0LSPw8ckOtJwduaqdVOyJnATN5reUqPaX3QjUNCZkwbG2Ac8UdOzrywgI_nREPLk66UFxOhX3uiKMJOqLfWEBJyXQ51Tk=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/link-icon-2x.png" color="#f2547d" alt="website" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -210,7 +214,7 @@ function generateContactInfo() {
                 <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;width:30px;vertical-align:-webkit-baseline-middle">
                     <tbody style="box-sizing:border-box">
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
-                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:rgb(81 0 255 / 1)"><img src="https://ci5.googleusercontent.com/proxy/PMsX6QYblfid2-Aq_atF0w8D-5O2KEMGfclrImAJEOsQqE_sbKhMfAd7gH3akRnGu3ErEwVfaOuRfuDxpUBCSL-LKhPfwPnP1FnJHgaOjcrmV2CgMlczkQKYJb-bo0qnAEo7PcQNq51IElkIZFk=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png" color="#f2547d" alt="address" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
+                            <td style="box-sizing:border-box;padding:0px;border:0px;vertical-align:bottom"><span color="#f2547d" width="11" style="box-sizing:border-box;display:inline-block;background-color:${colorInput}"><img src="https://ci5.googleusercontent.com/proxy/PMsX6QYblfid2-Aq_atF0w8D-5O2KEMGfclrImAJEOsQqE_sbKhMfAd7gH3akRnGu3ErEwVfaOuRfuDxpUBCSL-LKhPfwPnP1FnJHgaOjcrmV2CgMlczkQKYJb-bo0qnAEo7PcQNq51IElkIZFk=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/address-icon-2x.png" color="#f2547d" alt="address" width="13" style="box-sizing:border-box;border-style:none;display:block" class="CToWUd" data-bit="iit"></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -232,7 +236,7 @@ function generateSocial() {
 
     if (facebookInput != '') {
         facebook = `<td style="box-sizing:border-box;padding:0px;border:0px">
-                <a href="https://${facebookInput}" color="#6a78d1" style="box-sizing:border-box;background-color:rgb(81 0 255 / 1);display:inline-block;padding:0px" target="__blank"><img src="https://ci6.googleusercontent.com/proxy/CsU8Viqi3BJDAFLrGZPksmkYgWVO33uPMuUPYTdIjlZGkYPTUoI_vJDzFKjQFwApPgNeOzuP2McTvftBr9y45oU4K7hT_3YVrqR7L-3VwYbeIS13VrCdWig_8JnKG5CZ_mBs7omd-uFCFStjfCVo=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
+                <a href="https://${facebookInput}" color="#6a78d1" style="box-sizing:border-box;background-color:${colorInput};display:inline-block;padding:0px" target="__blank"><img src="https://ci6.googleusercontent.com/proxy/CsU8Viqi3BJDAFLrGZPksmkYgWVO33uPMuUPYTdIjlZGkYPTUoI_vJDzFKjQFwApPgNeOzuP2McTvftBr9y45oU4K7hT_3YVrqR7L-3VwYbeIS13VrCdWig_8JnKG5CZ_mBs7omd-uFCFStjfCVo=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/facebook-icon-2x.png"
                         alt="facebook" color="#6a78d1" height="24" style="box-sizing:border-box;border-style:none;max-width:135px;display:block" class="CToWUd" data-bit="iit"></a>
             </td>
             <td width="5" style="box-sizing:border-box;padding:0px;border:0px">
@@ -242,7 +246,7 @@ function generateSocial() {
 
     if (twitterInput != '') {
         twitter = `<td style="box-sizing:border-box;padding:0px;border:0px">
-                <a href="https://${twitterInput}" color="#6a78d1" style="box-sizing:border-box;background-color:rgb(81 0 255 / 1);display:inline-block;padding:0px" target="__blank" ><img src="https://ci5.googleusercontent.com/proxy/7hurPF5R2XfTJTr2Fqhp-g90VfcTNaZV-l9jil-wiHwtT5Ml1DQ7jOF4iK6ioEc0wAAWwT4hZgaXYPuOg4zJ5G-cClwKcyCAVyjvb3__WdNvjK_wisecltPdtxx2obIkLOEh82rck1AaTEV-FxA=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/twitter-icon-2x.png"
+                <a href="https://${twitterInput}" color="#6a78d1" style="box-sizing:border-box;background-color:${colorInput};display:inline-block;padding:0px" target="__blank" ><img src="https://ci5.googleusercontent.com/proxy/7hurPF5R2XfTJTr2Fqhp-g90VfcTNaZV-l9jil-wiHwtT5Ml1DQ7jOF4iK6ioEc0wAAWwT4hZgaXYPuOg4zJ5G-cClwKcyCAVyjvb3__WdNvjK_wisecltPdtxx2obIkLOEh82rck1AaTEV-FxA=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/twitter-icon-2x.png"
                         alt="twitter" color="#6a78d1" height="24" style="box-sizing:border-box;border-style:none;max-width:135px;display:block" class="CToWUd" data-bit="iit"></a>
             </td>
             <td width="5" style="box-sizing:border-box;padding:0px;border:0px">
@@ -253,7 +257,7 @@ function generateSocial() {
     if (linkedinInput != '') {
         linkedIn = `
                     <td style="box-sizing:border-box;padding:0px;border:0px">
-                <a href="https://${linkedinInput}" color="#6a78d1" style="box-sizing:border-box;background-color:rgb(81 0 255 / 1);display:inline-block;padding:0px" target="__blank"><img src="https://ci6.googleusercontent.com/proxy/8VnMNxHLCZ0mb5p6kFUeerh69ZxNFn796FO-bPB4zCIy6zKpR1zhFWOLua5F0V0VgIit8AVUmjEgifJrk7e9BwF3wOGdMevsrii7gV2oBOFEo5guBdtnCAwg1eRcW3MR-HHxsstpA8fhJPI5apj8=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
+                <a href="https://${linkedinInput}" color="#6a78d1" style="box-sizing:border-box;background-color:${colorInput};display:inline-block;padding:0px" target="__blank"><img src="https://ci6.googleusercontent.com/proxy/8VnMNxHLCZ0mb5p6kFUeerh69ZxNFn796FO-bPB4zCIy6zKpR1zhFWOLua5F0V0VgIit8AVUmjEgifJrk7e9BwF3wOGdMevsrii7gV2oBOFEo5guBdtnCAwg1eRcW3MR-HHxsstpA8fhJPI5apj8=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/linkedin-icon-2x.png"
                         alt="linkedin" color="#6a78d1" height="24" style="box-sizing:border-box;border-style:none;max-width:135px;display:block" class="CToWUd" data-bit="iit"></a>
             </td>
             <td width="5" style="box-sizing:border-box;padding:0px;border:0px">
@@ -263,7 +267,7 @@ function generateSocial() {
 
     if (instagramInput != '') {
         instagram = `<td style="box-sizing:border-box;padding:0px;border:0px">
-                <a href="https://${instagramInput}" color="#6a78d1" style="box-sizing:border-box;background-color:rgb(81 0 255 / 1);display:inline-block;padding:0px" target="__blank"><img src="https://ci4.googleusercontent.com/proxy/N8g6tZ7eglyo7c_6d8oDw66CnB6TXXjsEzJARvc9fD3jikHSnoEtAs2zQjlpsa6zX3aAyD6apMdrUeWhCbbT_8rbyW-AqHOjfQQWIa_UrT_KpQ4kKh1zjDP5nh-osDYyAh4XeiSmeBBT1nFHzi8PtQ=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
+                <a href="https://${instagramInput}" color="#6a78d1" style="box-sizing:border-box;background-color:${colorInput};display:inline-block;padding:0px" target="__blank"><img src="https://ci4.googleusercontent.com/proxy/N8g6tZ7eglyo7c_6d8oDw66CnB6TXXjsEzJARvc9fD3jikHSnoEtAs2zQjlpsa6zX3aAyD6apMdrUeWhCbbT_8rbyW-AqHOjfQQWIa_UrT_KpQ4kKh1zjDP5nh-osDYyAh4XeiSmeBBT1nFHzi8PtQ=s0-d-e1-ft#https://cdn2.hubspot.net/hubfs/53/tools/email-signature-generator/icons/instagram-icon-2x.png"
                         alt="instagram" color="#6a78d1" height="24" style="box-sizing:border-box;border-style:none;max-width:135px;display:block" class="CToWUd" data-bit="iit"></a>
             </td>
             <td width="5" style="box-sizing:border-box;padding:0px;border:0px">
@@ -341,7 +345,7 @@ function generateSignature() {
                             <td height="10" style="box-sizing:border-box;padding:0px;border:0px"></td>
                         </tr>
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
-                            <td color="#f2547d" width="auto" height="1" style="box-sizing:border-box;padding:0px;border-top:0px;border-right:0px;border-bottom:1px solid rgb(81 0 255 / 1);border-left:none;width:450px;display:block"></td>
+                            <td color="#f2547d" width="auto" height="1" style="box-sizing:border-box;padding:0px;border-top:0px;border-right:0px;border-bottom:1px solid ${colorInput};border-left:none;width:450px;display:block"></td>
                         </tr>
                         <tr style="box-sizing:border-box;margin:0px;padding:0px;border:0px">
                             <td height=20" style="box-sizing:border-box;padding:0px;border:0px"></td>
