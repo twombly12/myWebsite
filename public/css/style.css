@@ -521,6 +521,10 @@ body *::selection {
 
 /* ------------------------------------------------- Main Menu ------------------------------------------------- */
 
+.hide-link {
+    display: none !important;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -901,6 +905,10 @@ footer {
 
 .footer-content .button {
     margin-top: 28px;
+}
+
+.footer-content .dropdown-content {
+    display: none;
 }
 
 

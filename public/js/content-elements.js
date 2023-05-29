@@ -19,7 +19,7 @@ const menuLinks = {
                     <ul>
                         <li><a href="/email-signature-generator.html">Email Signature Generator</a></li>
                         <li><a href="/qr-code-generator.html">QR Code Generator</a></li>
-                        <li><a href="/activity-tracker.html">Activity Tracker</a></li>
+                        <li class="hide-link"><a href="/activity-tracker.html">Activity Tracker</a></li>
                         <li><a href="/webapps.html">All</a></li>
                     </ul>
                 </div>
@@ -30,8 +30,8 @@ const menuLinks = {
 
     'info': `
             <li><a href="/testimonials.html">Testimonials</a></li>
-            <li><a class="active" href="/about.html">About</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li class="hide-link"><a class="active" href="/about.html">About</a></li>
+            <li class="hide-link"><a href="/blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
                     `,
 }
