@@ -12,6 +12,9 @@ Contact
 To Do
 ______
 
-Fix full page website scvreenshots that are missing bits
+"And More" Web App Mockup + link
+Fix full page website screenshots that are missing bits
+Make Dark Mode option stay on page change
+Close Email Sig App popup with outside click or essence -- should 'essence' be 'escape'?
 
 

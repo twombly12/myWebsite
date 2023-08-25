@@ -1363,7 +1363,7 @@ input:checked+.slider:before {
 }
 
 .webApp-content.active {
-    display: block;
+    display: flex;
 }
 
 
