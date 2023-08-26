@@ -1,3 +1,13 @@
+/* -- Colors
+
+Dark        #5100ff
+Medium      #854dff
+Light       #A880FF
+
+
+Colors -- */
+
+
 /* ---- */
 
 
@@ -136,7 +146,7 @@ body.active {
 
 body,
 #testimonials {
-    background: rgb(245 245 245 / 1);
+    background: rgb(255 255 255/ 1);
 }
 
 ol,
@@ -240,7 +250,7 @@ form label {
 }
 
 .dark-color-text {
-    color: rgb(81 0 255 / 1);
+    color: rgb(133 77 255 / 1);
     ;
 }
 
@@ -264,10 +274,17 @@ form label {
     margin-bottom: 8%;
 }
 
+.text-image {
+    displaY: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .text-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 94%;
+    height: 94%;
 }
 
 .two-column {
@@ -297,8 +314,8 @@ form label {
 /* ------------------------------------------------- Container Styling ------------------------------------------------- */
 
 .shadowed-box {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: 2px solid rgb(230 230 230 / 1.0);
+    box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+    border: 1px solid rgb(230 230 230 / 1.0);
     background: #FFF;
     padding: 30px;
     border-radius: 8px;
@@ -349,14 +366,14 @@ form label {
 /* ------------------------------------------------- Background Colors ------------------------------------------------- */
 
 .white-background {
-    background: #FFF;
+    background: rgb(255 255 255 / 1);
 }
 
 
 /* ------------------------------------------------- Highlight ------------------------------------------------- */
 
 body *::selection {
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
     color: #FFF;
 }
 
@@ -396,7 +413,7 @@ body *::selection {
 
 .text-underline {
     position: relative;
-    width: 400px;
+    max-width: 400px;
     margin: 0 auto 0px auto;
     text-align: center;
 }
@@ -480,18 +497,18 @@ body *::selection {
 }
 
 .button.color {
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
     color: #FFF;
 }
 
 .button.color::before,
 .button.color::after {
-    border-color: rgb(81 0 255 / 1);
+    border-color: rgb(133 77 255 / 1);
 }
 
 #testimonials .button.color::before,
 #testimonials .button.color::after {
-    border-color: rgb(81 0 255 / 1);
+    border-color: rgb(133 77 255 / 1);
 }
 
 .seeMore .button {
@@ -515,7 +532,7 @@ body *::selection {
     left: 0;
     height: 2px;
     width: 100%;
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
 }
 
 
@@ -686,7 +703,7 @@ nav.menu .dropdown-content li a {
 
 /* nav.menu.sticky .dropdown-content,
 nav.menu.sticky .dropdown-content::after {
-    background: rgb(245 245 245 / 1);
+    background: rgb(255 255 255/ 1);
 }
 
 nav.menu.sticky .dropdown-content li {
@@ -812,7 +829,7 @@ nav.menu.sticky .dropdown-content li a {
 /* ------------------------------------------------- Footer Social ------------------------------------------------- */
 
 #action {
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
     padding-bottom: 40px;
     clip-path: polygon(0px 0px, 100% 0px, 100% 60%, 50% 100%, 0px 60%);
 }
@@ -876,7 +893,7 @@ footer {
     left: 0;
     height: 2px;
     width: 100%;
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
 }
 
 .footer-content ul li a {
@@ -978,12 +995,12 @@ footer {
 }
 
 input:checked+.slider {
-    background-color: rgb(81 0 255 / 1);
+    background-color: rgb(133 77 255 / 1);
     ;
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px rgb(81 0 255 / 1);
+    box-shadow: 0 0 1px rgb(133 77 255 / 1);
 }
 
 input:checked+.slider:before {
@@ -1014,7 +1031,7 @@ input:checked+.slider:before {
 
 .landing {
     height: 88vh;
-    background: radial-gradient(at calc(50% + 400px), rgb(81 0 255 / 1) 0%, #200066 100%);
+    background: radial-gradient(at calc(50% + 400px), rgb(133 77 255 / 1) 0%, #200066 100%);
     position: relative;
     display: flex;
     align-items: center;
@@ -1083,7 +1100,7 @@ input:checked+.slider:before {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgb(245 245 245 / 1);
+    background: rgb(255 255 255/ 1);
     z-index: -2;
 }
 
@@ -1179,7 +1196,7 @@ input:checked+.slider:before {
     bottom: 0;
     width: max-content;
     padding: 10px 40px;
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
     color: #FFF;
     font-size: 2rem;
     font-weight: 500;
@@ -1286,7 +1303,7 @@ input:checked+.slider:before {
 }
 
 .webApp-toggle.active h4 {
-    color: rgb(81 0 255 / 1);
+    color: rgb(133 77 255 / 1);
 }
 
 .webApp-toggle.active span {
@@ -1321,7 +1338,7 @@ input:checked+.slider:before {
 }
 
 #webApp-selector .active h4::before {
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
 }
 
 #webApp-selector .active h4::after {
@@ -1389,7 +1406,7 @@ input:checked+.slider:before {
     left: 0;
     width: 100%;
     height: 120%;
-    background: radial-gradient(circle, rgb( 245 245 245 / 0) 0%, rgb(245 245 245 / 1) 90%);
+    background: radial-gradient(circle, rgb( 255 255 255/ 0) 0%, rgb(255 255 255/ 1) 90%);
 }
 
 .logoList span {
@@ -1437,7 +1454,7 @@ input:checked+.slider:before {
 }
 
 #testimonial-content {
-    width: 660px;
+    max-width: 660px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1451,7 +1468,7 @@ input:checked+.slider:before {
 #testimonial-content::after {
     font-family: 'Yantramanav';
     content: '"';
-    color: rgb(81 0 255 / 1);
+    color: rgb(133 77 255 / 1);
     position: absolute;
     width: 40px;
     height: 40px;
@@ -1476,7 +1493,7 @@ input:checked+.slider:before {
 
 #testimonial-content p {
     padding: 50px 100px;
-    border: 2px solid rgb(230 230 230 / 1.0);
+    border: 1px solid rgb(230 230 230 / 1.0);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     line-height: 1.4;
     background: #FFF;
@@ -1490,7 +1507,7 @@ input:checked+.slider:before {
     transform: translate(-50%, 0) rotate(45deg);
     height: 37px;
     width: 37px;
-    border: 2px solid rgb(230 230 230 / 1.0);
+    border: 1px solid rgb(230 230 230 / 1.0);
     background: #FFF;
     border-top: none;
     border-left: none;
@@ -1511,7 +1528,7 @@ input:checked+.slider:before {
     letter-spacing: 3px;
     margin-top: 8px;
     font-weight: 600;
-    color: rgb(81 0 255 / 1);
+    color: rgb(133 77 255 / 1);
 }
 
 
@@ -1581,7 +1598,7 @@ input:checked+.slider:before {
 }
 
 .slider-arrow:hover {
-    border-color: rgb(81 0 255 / 1);
+    border-color: rgb(133 77 255 / 1);
 }
 
 .slider-dots {
@@ -1605,7 +1622,7 @@ input:checked+.slider:before {
 
 .slider-dot-control:hover,
 .slider-dot-control.active {
-    background: rgb(81 0 255 / 1);
+    background: rgb(133 77 255 / 1);
 }
 
 
@@ -1743,7 +1760,7 @@ input:checked+.slider:before {
 }
 
 .form-input:focus-visible {
-    outline-color: rgb(81 0 255 / 1);
+    outline-color: rgb(133 77 255 / 1);
 }
 
 form textarea {
