@@ -1,13 +1,19 @@
-// Need to add Query String!!!!!
-// Need to add Query String!!!!!
-// Need to add Query String!!!!!
-// Need to add Query String!!!!!
+var url = window.location.search;
+url = url.replace("?", ''); // remove the ?
+url = url.replace("%20", ' '); // remove the %20 and replace with space
+url = url.toLowerCase() // remove case sensitivity
+
+console.log(url)
+let obj = clientTracker.find(item => item.name.toLowerCase() === url || item.nameTwo.toLowerCase() === url);
 
 function populatePage() {
 
     // client name in title
     let clientName = document.querySelector('#client-name');
-    clientName.innerHTML = clientTracker[0].name;
+    clientName.innerHTML = obj.name;
+    if (obj.nameTwo !== "") {
+        clientName.innerHTML += " & " + obj.nameTwo;
+    }
 
     // Populate project reusable elements
     let statusPrefix = `<span class="bold-text">Status: </span>`
@@ -24,9 +30,9 @@ function populatePage() {
         // get content from project item object
         let projectContainer = document.querySelector('#' + deliverable)
         let projectContent = document.querySelector('#' + deliverable + ' .projectContent')
-        let status = clientTracker[0][deliverable][`${deliverable}_status`];
-        let date = clientTracker[0][deliverable][`${deliverable}_date`];
-        let notes = clientTracker[0][deliverable][`${deliverable}_notes`];
+        let status = obj[deliverable][`${deliverable}_status`];
+        let date = obj[deliverable][`${deliverable}_date`];
+        let notes = obj[deliverable][`${deliverable}_notes`];
 
         // add completed class or in progress class
         if (status == 'Completed') {
@@ -47,8 +53,8 @@ function populatePage() {
             projectContent.innerHTML += `<p>${notesPrefix} ${notes}</p>`
         }
 
-
-        console.log(status, date, notes)
     }
 
 }
+
+populatePage(obj)
