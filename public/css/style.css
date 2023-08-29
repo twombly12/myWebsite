@@ -245,6 +245,10 @@ form label {
     margin-bottom: 80px;
 }
 
+.bold-text {
+    font-weight: 800;
+}
+
 .center-text {
     text-align: center;
 }
