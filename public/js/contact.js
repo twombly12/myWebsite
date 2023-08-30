@@ -1,3 +1,4 @@
+// const contactForm = document.querySelector('.contact-form')
 const contactForm = document.querySelector('.contact-form')
 
 let name = document.getElementById('name')
@@ -5,8 +6,12 @@ let email = document.getElementById('email')
 let subject = document.getElementById('subject')
 let message = document.getElementById('message')
 
+console.log(contactForm)
+
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    console.log('clicked')
 
     let formData = {
         name: name.value,

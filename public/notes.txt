@@ -12,11 +12,21 @@ Contact
 To Do
 ______
 
-Add Query String to Node for Progress Tracker
-"And More" Web App Mockup + link
+
 Fix full page website screenshots that are missing bits
 Make Dark Mode option stay on page change
 Close Email Sig App popup with outside click or essence -- should 'essence' be 'escape'?
+
+
+Testimonials
+______
+
+Julie Cameron
+Sandy
+Matthew Kassim
+William Rackney
+
+
 
 
 

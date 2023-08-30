@@ -94,7 +94,9 @@ app.post('/', (req, res) => {
         from: 'req.body.email',
         to: process.env.SECRET_ID,
         subject: `Message from ${req.body.email}: ${req.body.subject}`,
-        text: req.body.message,
+        text: `Message from Dash Interactive Contact Form
+        
+        ${req.body.message}`,
     }
 
     transporter.sendMail(mailOptions, (error, info) => {

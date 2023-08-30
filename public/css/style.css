@@ -225,7 +225,7 @@ h4 {
 }
 
 p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -515,7 +515,8 @@ body *::selection {
     border-color: rgb(133 77 255 / 1);
 }
 
-.seeMore .button {
+.seeMore .button,
+.white-border {
     border: 4px solid rgb(250 250 250 / 1);
     justify-self: start;
 }
@@ -921,7 +922,7 @@ footer {
     left: 0;
     height: 2px;
     width: 100%;
-    background: rgb(15 15 15 / 1);
+    background: rgb(25 25 25 / 1);
 }
 
 .footer-content .button {
