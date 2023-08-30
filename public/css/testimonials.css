@@ -1,0 +1,120 @@
+/* ------------------------------------------------- Testimonials ------------------------------------------------- */
+
+#story-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 4% auto 0;
+    text-align: left;
+    /* overflow: hidden; */
+}
+
+.story-box {
+    width: calc(50% - 20px);
+    margin-bottom: 4%;
+    padding-bottom: 5%;
+    height: 100%;
+}
+
+.story-box:last-child,
+.story-box:nth-last-child(2) {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.story-box::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 20px);
+    height: 1px;
+    bottom: 0;
+    background: rgb(235 235 235 / 1);
+}
+
+.story-box:nth-child(even)::after {
+    right: 10%;
+}
+
+.story-box:nth-child(odd)::after {
+    left: 10%;
+}
+
+.story-box:last-child::after,
+.story-box:nth-last-child(2)::after {
+    display: none;
+}
+
+#story-content p {
+    min-height: 330px;
+    padding: 16% 16% 8% 16%;
+    border: 1px solid rgb(230 230 230 / 1.0);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    line-height: 1.4;
+    background: #FFF;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#story-content p::before {
+    font-family: 'Yantramanav';
+    content: '"';
+    color: rgb(133 77 255 / 1);
+    position: absolute;
+    z-index: 999;
+    font-size: 16rem;
+    font-weight: 900;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#story-content p .arrow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(45deg);
+    height: 37px;
+    width: 37px;
+    border: 1px solid rgb(230 230 230 / 1.0);
+    background: #FFF;
+    border-top: none;
+    border-left: none;
+    box-shadow: 4px 4px 10px -4px rgba(100, 100, 111, 0.2), inset -5px -5px 10px -10px rgba(100, 100, 111, 0.2);
+}
+
+.story-person {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    grid-gap: 20px;
+}
+
+.story-person img {
+    border-radius: 100px;
+    width: 75px;
+}
+
+#story-content>div span {
+    display: block;
+    font-size: 2.25rem;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    font-weight: 600;
+}
+
+#story-content>div span+span {
+    font-size: 1.75rem;
+    margin-top: 6px;
+    font-weight: 600;
+    color: rgb(133 77 255 / 1);
+}
+
+#story-content>div span+span+span {
+    color: rgb(117 117 117 / 1);
+    font-weight: 400;
+}
