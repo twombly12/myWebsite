@@ -66,18 +66,6 @@
     animation: pulse 2s infinite;
 }
 
-@keyframes pulse {
-    0% {
-        -webkit-box-shadow: 0 0 0 0 rgb(133 77 255 / 0.7);
-    }
-    70% {
-        -webkit-box-shadow: 0 0 0 14px rgb(133 77 255 / 0);
-    }
-    100% {
-        -webkit-box-shadow: 0 0 0 0 rgb(133 77 255 / 0);
-    }
-}
-
 .deliverable.last {
     padding-bottom: 0px;
 }

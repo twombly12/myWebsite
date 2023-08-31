@@ -37,6 +37,20 @@ function activePage() {
 }
 activePage()
     /* ----------------------------------------------- Dark Mode ----------------------------------------------- */
+    // What is Dark Mode Choice
+let isDark = 'no';
+
+// Add Dark Mode Choice to Local Storage
+function addToLocalStorage() {
+    localStorage.setItem("isDark", JSON.stringify(isDark));
+}
+
+// Get Current Dark Mode Choice
+function retrieveLocalStorage() {
+    isDark = JSON.parse(localStorage.getItem("isDark"));
+    return isDark;
+}
+
 function darkMode() {
     // Get all switches
     const isChecked = document.querySelectorAll('.switch input')
@@ -56,6 +70,7 @@ function darkMode() {
     toggleIds.splice(toggleClicked, 1)
 
     const pageElements = document.querySelectorAll('.day')
+
     if (this.checked == true) {
         // Toggle non-clicked switches as well
         toggleIds.forEach(element => {
@@ -67,6 +82,8 @@ function darkMode() {
         pageElements.forEach(element => {
             element.classList.add('night')
         })
+        isDark = 'yes';
+        addToLocalStorage()
 
     } else {
         // Toggle non-clicked switches as well
@@ -79,15 +96,52 @@ function darkMode() {
         pageElements.forEach(element => {
             element.classList.remove('night')
         })
+        isDark = 'no';
+        addToLocalStorage()
+    }
+}
+
+function keepDarkMode() {
+    retrieveLocalStorage()
+    if (isDark === 'yes') {
+        console.log('clicked');
+
+        // Get all switches
+        const isChecked = document.querySelectorAll('.switch input')
+
+        // Convert switches to Array
+        const ischeckedArray = Array.from(isChecked)
+
+        // Get all switch Id's
+        const toggleIds = ischeckedArray.map(element => {
+            return element.id
+        })
+        const pageElements = document.querySelectorAll('.day')
+            // Toggle non-clicked switches as well
+        toggleIds.forEach(element => {
+                const uncheckedSwitch = document.querySelector(`input#${element}`)
+                uncheckedSwitch.checked = true
+
+            })
+            // Add dark mode
+        pageElements.forEach(element => {
+            element.classList.add('night')
+        })
+
+
     }
 }
 
 const darkModeListener = (() => {
-        document.querySelectorAll('.switch input').forEach(element => {
-            element.addEventListener('click', darkMode);
-        })
-    })()
-    /* ----------------------------------------------- Slider ----------------------------------------------- */
+    document.querySelectorAll('.switch input').forEach(element => {
+        element.addEventListener('click', darkMode);
+    })
+    keepDarkMode()
+
+})()
+
+
+/* ----------------------------------------------- Slider ----------------------------------------------- */
 function moveSlider() {
     let dots = document.querySelectorAll('.slider-dot-control')
     dots.forEach(element => {

@@ -31,7 +31,8 @@
     width: calc(100% + 20px);
     height: 1px;
     bottom: 0;
-    background: rgb(235 235 235 / 1);
+    /* background: rgb(225 225 225 / 1); */
+    border-bottom: 1px solid rgb(225 225 225 / 1);
 }
 
 .story-box:nth-child(even)::after {
@@ -111,7 +112,6 @@
     font-size: 1.75rem;
     margin-top: 6px;
     font-weight: 600;
-    color: rgb(133 77 255 / 1);
 }
 
 #story-content>div span+span+span {

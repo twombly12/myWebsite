@@ -22,7 +22,7 @@ let instagramInput = 'https://www.instagram.com';
 
 let logoInput = "/assets/Dash Logo Colours-purple.png"
 
-let colorInput = "rgb(81 0 255 / 1)"
+let colorInput = "rgb(133 77 255 / 1)"
 
 
 function phoneFormat(phone) {
