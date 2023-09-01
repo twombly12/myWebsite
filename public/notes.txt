@@ -1,25 +1,19 @@
-Home
-About??
-Testimonials??
-Web Sites
-Web Apps
-Logos
-Pricing
+
 Blog
-Contact
+______
 
 
 To Do
 ______
 
-
+Remove .HTML from links
+Contact Form Empty Submission
+Contact Form Spam
 Fix full page website screenshots that are missing bits
 Responsiveness
 Fix bottom of cloud graphic
 Double check text
 Info download for Progress Tracker
-Search bar for progress tracker?
-Add Optional Items to Progress Tracker (with a dotted line) like QR Code and Email Sig
 More Testimonials
 Close Email Sig App popup with outside click or essence -- should 'essence' be 'escape'?
 

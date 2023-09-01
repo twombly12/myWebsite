@@ -165,6 +165,7 @@ section .email-signature {
     text-transform: none !important;
     font-weight: 400;
     border: 1px solid rgba(70, 90, 126, 0.4);
+    color: red;
 }
 
 .background-color {

@@ -3,16 +3,19 @@ url = url.replace("?", ''); // remove the ?
 url = url.replace("%20", ' '); // remove the %20 and replace with space
 url = url.toLowerCase() // remove case sensitivity
 
-console.log(url)
-let obj = clientTracker.find(item => item.name.toLowerCase() === url || item.nameTwo.toLowerCase() === url);
+let queryString = clientTracker.find(item => item.name.toLowerCase() === url || item.nameTwo.toLowerCase() === url);
 
 function populatePage() {
-
     // client name in title
     let clientName = document.querySelector('#client-name');
-    clientName.innerHTML = obj.name;
-    if (obj.nameTwo !== "") {
-        clientName.innerHTML += " & " + obj.nameTwo;
+    if (queryString == undefined) {
+        clientName.innerHTML = 'No Operator found';
+        return
+    } else {
+        clientName.innerHTML = queryString.name;
+        if (queryString.nameTwo !== "") {
+            clientName.innerHTML += " & " + queryString.nameTwo;
+        }
     }
 
     // Populate project reusable elements
@@ -24,15 +27,15 @@ function populatePage() {
     let projectDeliverables = ['logo', 'businessCard', 'video', 'website'];
 
     for (let i = 0; i < projectDeliverables.length; i++) {
-        // get object for project item
+        // get Object for project item
         let deliverable = projectDeliverables[i]
 
-        // get content from project item object
+        // get content from project item Object
         let projectContainer = document.querySelector('#' + deliverable)
         let projectContent = document.querySelector('#' + deliverable + ' .projectContent')
-        let status = obj[deliverable][`${deliverable}_status`];
-        let date = obj[deliverable][`${deliverable}_date`];
-        let notes = obj[deliverable][`${deliverable}_notes`];
+        let status = queryString[deliverable][`${deliverable}_status`];
+        let date = queryString[deliverable][`${deliverable}_date`];
+        let notes = queryString[deliverable][`${deliverable}_notes`];
 
         // add completed class or in progress class
         if (status == 'Completed') {
@@ -52,9 +55,34 @@ function populatePage() {
         if (notes.length > 0) {
             projectContent.innerHTML += `<p>${notesPrefix} ${notes}</p>`
         }
-
     }
-
 }
 
-populatePage(obj)
+// function to search for persons name
+function searchPerson() {
+    // Get name from field
+    let searchQuery = document.querySelector('#name').value;
+    // Remove multiple spaces
+    searchQuery = Array.from(searchQuery.toLowerCase().replace(/\s+/g, ' ').trim());
+    // turn spaces into %20 for url
+    let curratedSearch = searchQuery.map(element => {
+            if (element === " ") {
+                element = '%20'
+            }
+            return element
+        })
+        // join string and submit url
+    curratedSearch = curratedSearch.join('')
+    window.location.replace(`/project-progress.html?${curratedSearch}`);
+}
+
+// get form button and add function to search
+let searchForm = document.querySelector('.project-search');
+
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    searchPerson();
+})
+
+
+populatePage(queryString)

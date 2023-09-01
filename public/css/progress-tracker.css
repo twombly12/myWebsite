@@ -1,7 +1,7 @@
 .deliverable {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    width: 80%;
+    width: 700px;
     margin: 0 auto;
     grid-gap: 20px;
     justify-content: center;
@@ -45,16 +45,21 @@
     content: '';
     position: absolute;
     top: 0;
-    left: 9.6%;
+    left: 9.5%;
     width: 4px;
     height: 100%;
-    /* background: rgb(133 77 255 / 1); */
-    background: rgb(220 220 220 / 1);
+    border-left: 4px solid rgb(220 220 220 / 1);
+    /* background: rgb(220 220 220 / 1); */
     z-index: -1;
 }
 
+.dottedAfter.deliverable::after {
+    border-left-style: dashed;
+    border-left-width: 3px;
+}
+
 .deliverable.completed::after {
-    background: rgb(133 77 255 / 1);
+    border-color: rgb(133 77 255 / 1);
 }
 
 .deliverable.completed .top-icon {
@@ -71,7 +76,7 @@
 }
 
 .deliverable.last::after {
-    background: none;
+    border: none;
 }
 
 .projectContent h3 {
@@ -83,4 +88,62 @@
     line-height: 1.6;
     font-weight: 700;
     color: rgb(133 77 255 / 1)
+}
+
+.project-search {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 750px;
+    margin: -2% auto 6%;
+    padding-bottom: 6%;
+}
+
+.project-search::after {
+    content: "";
+    position: absolute;
+    width: calc(110%);
+    height: 1px;
+    bottom: 0;
+    border-bottom: 1px solid rgb(225 225 225 / 1);
+}
+
+.project-search label {
+    width: 100%;
+    margin: 0 0 20px 16px;
+    text-transform: none;
+    text-align: center;
+    color: #000;
+}
+
+.project-search input {
+    width: calc(100% - 55px);
+    height: 55px;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4em;
+    text-transform: none !important;
+    font-weight: 400;
+    border: 1px solid rgba(70, 90, 126, 0.4);
+}
+
+.project-search button {
+    width: 55px;
+    height: 55px;
+    margin: 0px;
+    background: rgb(133 77 255 / 1);
+    border: 1px solid rgba(70, 90, 126, 0.4);
+    padding: 18px;
+    transition: 0.1s ease all;
+}
+
+.project-search svg {
+    fill: rgb(255 255 255 / 1);
+}
+
+.project-search button:hover {
+    background: rgb(168 128 255 / 1);
+    padding: 16px;
 }

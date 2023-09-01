@@ -4,6 +4,8 @@ const qrContent = document.querySelector("#qr-content")
 const qrGenerated = document.querySelector('#qrcode');
 const save = document.querySelector('#save-btn');
 
+document.querySelector('#websites p').scrollIntoView();
+
 /-------------------------- Show Spinner --------------------------/
 const showSpinner = () => {
     document.querySelector('#spinner').style.display = 'block'
