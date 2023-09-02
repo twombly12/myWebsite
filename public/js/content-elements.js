@@ -12,27 +12,27 @@ function head() {
 const menuLinks = {
     'services': `
             <li><a href="/">Home</a></li>
-            <li><a href="/websites.html">Websites</a></li>
+            <li><a href="/websites">Websites</a></li>
             <li class="dropdown">
-                <a href="/webapps.html">Web Apps</a>
+                <a href="/webapps">Web Apps</a>
                 <div class="dropdown-content">
                     <ul>
-                        <li><a href="/email-signature-generator.html">Email Signature Generator</a></li>
-                        <li><a href="/qr-code-generator.html">QR Code Generator</a></li>
-                        <li class="hide-link"><a href="/activity-tracker.html">Activity Tracker</a></li>
-                        <li><a href="/webapps.html">All</a></li>
+                        <li><a href="/email-signature-generator">Email Signature Generator</a></li>
+                        <li><a href="/qr-code-generator">QR Code Generator</a></li>
+                        <li class="hide-link"><a href="/activity-tracker">Activity Tracker</a></li>
+                        <li><a href="/webapps">All</a></li>
                     </ul>
                 </div>
             </li>
-            <li><a href="/logos.html">Logos</a></li>
+            <li><a href="/logos">Logos</a></li>
             
         `,
 
     'info': `
-            <li><a href="/testimonials.html">Testimonials</a></li>
-            <li class="hide-link"><a class="active" href="/about.html">About</a></li>
-            <li class="hide-link"><a href="/blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li class="hide-link"><a class="active" href="/about">About</a></li>
+            <li class="hide-link"><a href="/blog">Blog</a></li>
+            <li><a href="contact">Contact</a></li>
                     `,
 }
 

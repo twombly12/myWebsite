@@ -73,7 +73,7 @@ function searchPerson() {
         })
         // join string and submit url
     curratedSearch = curratedSearch.join('')
-    window.location.replace(`/project-progress.html?${curratedSearch}`);
+    window.location.replace(`/project-progress?${curratedSearch}`);
 }
 
 // get form button and add function to search

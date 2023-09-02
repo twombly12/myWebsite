@@ -1779,6 +1779,10 @@ input:checked+.slider:before {
 
 /* ------------------------------------------------- Contact Page ------------------------------------------------- */
 
+.contact-link {
+    display: none;
+}
+
 .form-container {
     display: flex;
     align-items: center;

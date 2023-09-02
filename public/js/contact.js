@@ -5,19 +5,30 @@ let name = document.getElementById('name')
 let email = document.getElementById('email')
 let subject = document.getElementById('subject')
 let message = document.getElementById('message')
-
-console.log(contactForm)
+let link = document.getElementById('contact-link')
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-
-    console.log('clicked')
 
     let formData = {
         name: name.value,
         email: email.value,
         subject: subject.value,
         message: message.value,
+    }
+
+    if (name.value === '' || email.value === '' || message.value === '') {
+        alert('Please fill out all fields')
+        return
+    }
+
+    if (link.value.length > 0) {
+        alert('email sent');
+        name.value = '';
+        email.value = '';
+        message.value = '';
+        link.value = '';
+        return
     }
 
     let xhr = new XMLHttpRequest()

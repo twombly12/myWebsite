@@ -6,16 +6,17 @@ ______
 To Do
 ______
 
-Remove .HTML from links
-Contact Form Empty Submission
-Contact Form Spam
+
+
 Fix full page website screenshots that are missing bits
 Responsiveness
-Fix bottom of cloud graphic
 Double check text
 Info download for Progress Tracker
+Add Casey Street Storage + Change Pics
+-------------------
 More Testimonials
 Close Email Sig App popup with outside click or essence -- should 'essence' be 'escape'?
+
 
 
 Testimonials
