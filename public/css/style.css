@@ -230,7 +230,7 @@ p {
 }
 
 form label {
-    font-size: 1.6rem;
+    font-size: 16px;
     line-height: 1.2;
     text-transform: uppercase;
     color: rgb(185 185 185 / 1);
@@ -272,6 +272,7 @@ form label {
 .section {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 .section.top {
@@ -850,17 +851,18 @@ nav.menu.sticky .dropdown-content li a {
 
 #action {
     background: rgb(133 77 255 / 1);
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     clip-path: polygon(0px 0px, 100% 0px, 100% 60%, 50% 100%, 0px 60%);
 }
 
 #action div {
-    padding: 12px 0;
+    padding: 22px 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     grid-gap: 16px;
+    /* justify-content: space-between; */
+    justify-content: center;
 }
 
 .social a {
@@ -1082,8 +1084,8 @@ input:checked+.slider:before {
 }
 
 .home .section {
-    width: 36%;
-    margin: 4% 20% 0 0;
+    max-width: 660px;
+    margin: 4% 20% 0 0%;
 }
 
 .content img {
@@ -1299,11 +1301,10 @@ input:checked+.slider:before {
     height: 100%;
     margin-top: 40px;
     grid-gap: 40px;
-    padding-left: 20px;
 }
 
 #webApp-selector {
-    flex: 0 0 25%;
+    flex: 0 0 24%;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
@@ -1854,6 +1855,19 @@ form textarea {
 }
 
 
+/* ------------------------------------------------- Hide & Show ------------------------------------------------- */
+
+.hide {
+    display: none !important;
+}
+
+.hide-mobile {}
+
+.show-mobile {
+    display: none;
+}
+
+
 /* ------------------------------------------------- Dark Mode Styling ------------------------------------------------- */
 
 .night h2:not(.dark-color-text):not(.light-color-text):not(#signature-container),
@@ -2060,7 +2074,11 @@ a .night #testimonial-content p,
         flex: 0 0 calc(50% - 40px);
     }
     .two-column {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .two-column>div {
+        width: 100%;
     }
     .section {
         max-width: 100%;
@@ -2071,5 +2089,244 @@ a .night #testimonial-content p,
         right: 50%;
         top: 100%;
         transform: translate(50%, -50%);
+    }
+    /* -- Websites preview -- */
+    .websites-content {
+        width: 100%;
+    }
+    .website-feature,
+    .websites-content .web-page:last-child,
+    .websites-content.web-apps div:last-child {
+        flex: 0 0 100%;
+    }
+    /* -- Testimonials preview -- */
+    #testimonials {
+        margin: -3px 0 0 0;
+        padding-bottom: 4%;
+    }
+    /* ---------- Contact --------- */
+    .two-column.contact-col {
+        flex-direction: column-reverse;
+    }
+    .two-column.contact-col img {
+        width: 65%;
+        margin: 0 auto;
+    }
+    /* ---------- Testimonials --------- */
+    .story-box {
+        width: 100%;
+    }
+    #story-content p {
+        min-height: 100%;
+    }
+    .story-box::after,
+    .story-box:nth-child(odd)::after {
+        width: 80%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .story-box:nth-last-child(2)::after {
+        display: flex;
+    }
+    .story-box:nth-last-child(2) {
+        margin-bottom: 4%;
+        padding-bottom: 5%;
+    }
+    /* -- Logos -- */
+    .logos {
+        grid-template-columns: repeat( 3, 1fr);
+    }
+}
+
+
+/* ----------------------------------- Media Queries for 1015 Width ----------------------------------- */
+
+@media only screen and (max-width: 1015px) {
+    .section {
+        margin: 0 4%;
+    }
+    .three-column>div {
+        flex: 0 0 100%;
+    }
+    /* -- Web Apps preview -- */
+    .webApp-container {
+        flex-wrap: wrap;
+        grid-gap: 30px;
+    }
+    #webApp-selector::before {
+        height: 88%;
+    }
+    #webApp-image {
+        flex: 0 0 100%;
+    }
+    #webApp-selector {
+        height: 200px;
+        margin: 0 auto;
+        flex: 0 0 86%;
+    }
+}
+
+
+/* ----------------------------------- Media Queries for 900 Width ----------------------------------- */
+
+@media only screen and (max-width: 900px) {
+    .home .section {
+        max-width: 560px;
+        margin: 4% 10% 0 0%;
+    }
+    .section.bottom {
+        margin-bottom: 12%;
+    }
+    .section.top {
+        margin-top: 12%;
+    }
+    #webApp-image {
+        padding: 8px;
+    }
+    /* -- Logo preview -- */
+    .logoList {
+        margin-top: -40px;
+        grid-gap: 14px;
+    }
+    .logoList span {
+        flex: 0 0 calc((100%/4) - 14px);
+        width: calc((100%/4) - 14px);
+    }
+    .logoList span:nth-child(2n+1) {
+        top: 30px;
+    }
+    /* -- Logos -- */
+    .logos {
+        grid-template-columns: repeat( 2, 1fr);
+    }
+    /* -- Project Tracker -- */
+    .deliverable {
+        width: 100%;
+    }
+    .project-search {
+        margin: -2% auto 10%;
+        padding-bottom: 10%;
+    }
+    /* -- qr Code -- */
+    #qrForm {
+        width: 100%;
+    }
+    .form-container {
+        padding: 30px;
+    }
+    /* -- websites --*/
+    #image-display {
+        padding: 20px;
+    }
+}
+
+
+/* ----------------------------------- Media Queries for 700 Width ----------------------------------- */
+
+@media only screen and (max-width: 700px) {
+    .section.bottom {
+        margin-bottom: 15%;
+    }
+    .section.top {
+        margin-top: 15%;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .show-mobile {
+        display: block;
+    }
+    .websites-hover p,
+    .webApps-hover p {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    .web-apps .websites-hover a {
+        margin-top: 8px;
+    }
+}
+
+
+/* ----------------------------------- Media Queries for 650 Width ----------------------------------- */
+
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 5rem;
+    }
+    #roles {
+        font-size: 3rem;
+    }
+    p {
+        font-size: 16px;
+    }
+    .home .section {
+        max-width: 450px;
+    }
+    .landing {
+        background-position: 55% center;
+    }
+    section.sub-landing h1 {
+        text-align: center;
+    }
+    /* -- Qr code -- */
+    .form-container {
+        padding: 0px;
+    }
+    /* -- Testimonials -- */
+    #testimonial-content p {
+        padding: 60px 50px;
+    }
+    /* -- Logos -- */
+    .logos {
+        grid-template-columns: repeat( 1, 1fr);
+    }
+    /* -- web apps -- */
+    .website-feature {
+        height: 275px;
+    }
+    .web-apps .website-feature {
+        height: 205px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer-content * {
+        margin: auto;
+    }
+    .footer-content .switch {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* ----------------------------------- Media Queries for 550 Width ----------------------------------- */
+
+@media only screen and (max-width: 550px) {
+    .home .section {
+        margin: 4% 0% 0 4%;
+    }
+    /* -- Logo preview -- */
+    .logoList {
+        margin-top: -40px;
+        grid-gap: 8px;
+    }
+    .logoList span {
+        flex: 0 0 calc((100%/3) - 8px);
+        width: calc((100%/3) - 8px);
+    }
+    .logoList span:nth-child(2n+1) {
+        top: 0px;
+    }
+    .logoList span:nth-child(3n+2) {
+        top: -30px;
+    }
+    .logoList span:nth-child(n+13) {
+        display: none;
+    }
+    #webApp-image {
+        height: 210px;
     }
 }

@@ -85,7 +85,7 @@ function footer() {
     <div id="action">
                 <div class="section">
                     <a href="/" class="logo"><img src="/assets/Dash Logo Colours-White.svg" href="#" alt="Dash Interactive Logo" /></a>
-                    <div class="social">
+                    <div class="social hide">
                         <h3>Follow Us</h3>
                         <a href=""><img src="/assets/fb.png" alt="social" /></a>
                         <a href=""><img src="/assets/insta.png" alt="social" /></a>
