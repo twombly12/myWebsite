@@ -224,9 +224,17 @@ h4 {
     margin-bottom: 8px;
 }
 
-p {
+p,
+ul,
+li {
     font-size: 18px;
     line-height: 1.6;
+}
+
+p a,
+ul a {
+    color: rgb(168 128 255 / 1);
+    font-weight: 600;
 }
 
 form label {
@@ -247,6 +255,10 @@ form label {
 
 .bold-text {
     font-weight: 800;
+}
+
+.semi-bold-text {
+    font-weight: 600;
 }
 
 .center-text {
@@ -1855,6 +1867,59 @@ form textarea {
 }
 
 
+/* ------------------------------------------------- Posts and text heavy pages ------------------------------------------------- */
+
+.post-content p+p {
+    margin-top: 16px;
+}
+
+.post-content p+ul li,
+.post-content ul>ul {
+    margin: 10px 0 0 30px;
+    list-style-type: circle;
+}
+
+.post-content ul+p {
+    margin-top: 16px;
+}
+
+.post-content p+h2 {
+    margin-top: 75px;
+}
+
+.post-content h2 {
+    padding-top: 75px;
+}
+
+.post-content h2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1px;
+    width: 104%;
+    transform: translate(-50%, 0);
+    border-bottom: 1px solid rgb(200 200 200 / 1);
+}
+
+.post-content h2:first-child::after {
+    border: none;
+}
+
+.post-content h2:first-child {
+    padding-top: 0;
+}
+
+.post-content {
+    max-width: 1000px;
+}
+
+.sub-heading {
+    font-weight: 600;
+    margin-top: 40px;
+}
+
+
 /* ------------------------------------------------- Hide & Show ------------------------------------------------- */
 
 .hide {
@@ -1876,7 +1941,8 @@ form textarea {
 .night p:not(.dark-color-text):not(.light-color-text):not(#signature-container),
 .night span:not(.dark-color-text):not(.light-color-text):not(#signature-container),
 .night .background-color,
-.night .project-search label {
+.night .project-search label,
+.night ul li {
     color: #FFF;
 }
 
@@ -1996,7 +2062,8 @@ a .night #testimonial-content p,
 .night .contact-form textarea,
 .night .top-icon,
 .night .project-search::after,
-.night .deliverable::after {
+.night .deliverable::after,
+.night .post-content h2::after {
     border-color: rgb(75 75 75 / 1);
 }
 

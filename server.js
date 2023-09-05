@@ -120,6 +120,14 @@ app.get("/project-progress", (request, response) => {
     response.sendFile(__dirname + "/public/project-progress.html");
 });
 
+app.get("/jbc-info", (request, response) => {
+    response.sendFile(__dirname + "/public/jbc-info.html");
+});
+
+app.get("/jbc-video", (request, response) => {
+    response.sendFile(__dirname + "/public/jbc-video.html");
+});
+
 /* -------------------------- Contact Form -------------------------- */
 app.post('/', (req, res) => {
     console.log(req.body);

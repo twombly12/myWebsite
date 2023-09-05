@@ -24,7 +24,7 @@ function populatePage() {
     let notesPrefix = `<span class="bold-text">Notes: </span>`
 
     // List of deliverables
-    let projectDeliverables = ['logo', 'businessCard', 'video', 'website'];
+    let projectDeliverables = ['intake', 'logo', 'businessCard', 'video', 'website'];
 
     for (let i = 0; i < projectDeliverables.length; i++) {
         // get Object for project item
@@ -33,9 +33,12 @@ function populatePage() {
         // get content from project item Object
         let projectContainer = document.querySelector('#' + deliverable)
         let projectContent = document.querySelector('#' + deliverable + ' .projectContent')
+
         let status = queryString[deliverable][`${deliverable}_status`];
+        console.log(status)
         let date = queryString[deliverable][`${deliverable}_date`];
         let notes = queryString[deliverable][`${deliverable}_notes`];
+
 
         // add completed class or in progress class
         if (status == 'Completed') {

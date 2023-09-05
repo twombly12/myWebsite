@@ -6,10 +6,10 @@ ______
 To Do
 ______
 
-
+JBC Marketing Video - center, responsivess, mouse hover
+JBC Branded Website
 Fix full page website screenshots that are missing bits
 Double check text
-Info download for Progress Tracker
 Add Casey Street Storage + Change Pics
 Mobile Menu - Sub Menu Items (Web Apps)
 -------------------

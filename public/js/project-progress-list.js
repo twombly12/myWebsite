@@ -1,6 +1,11 @@
 let clientTracker = [{
         "name": "john doe",
         "nameTwo": "bob doe",
+        "intake": {
+            "intake_status": "Completed",
+            "intake_date": "June 1, 2023",
+            "intake_notes": "test",
+        },
         "logo": {
             "logo_status": "Completed",
             "logo_date": "June 1, 2023",
