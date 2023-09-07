@@ -6,16 +6,13 @@ ______
 To Do
 ______
 
-JBC Marketing Video - center, responsivess, mouse hover
-JBC Branded Website
+Mobile QR Code
 Fix full page website screenshots that are missing bits
-Double check text
-Add Casey Street Storage + Change Pics
-Mobile Menu - Sub Menu Items (Web Apps)
 -------------------
 More Testimonials
 Double check Responsiveness
 Close Email Sig App popup with outside click or essence -- should 'essence' be 'escape'?
+Add Casey Street Storage + Change Pics
 
 
 

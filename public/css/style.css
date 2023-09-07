@@ -398,6 +398,10 @@ body *::selection {
 
 /* ------------------------------------------------- Effects ------------------------------------------------- */
 
+video {
+    cursor: pointer;
+}
+
 @keyframes pulse {
     0% {
         -webkit-box-shadow: 0 0 0 0 rgb(133 77 255 / 0.7);
@@ -653,7 +657,7 @@ nav.menu .active::after {
 
 /* ------------------------------------------------- Main Menu Drop Down ------------------------------------------------- */
 
-nav.menu .dropdown-content {
+#main-menu.menu .dropdown-content {
     position: absolute;
     background: rgb( 18 18 18 / 1);
     z-index: 1;
@@ -669,12 +673,12 @@ nav.menu .dropdown-content {
     border-radius: 12px;
 }
 
-nav.menu .dropdown-content,
-nav.menu .dropdown-content::after {
+#main-menu.menu .dropdown-content,
+#main-menu.menu .dropdown-content::after {
     background: rgb( 20 20 20 / 1);
 }
 
-nav.menu .dropdown-content::after {
+#main-menu.menu .dropdown-content::after {
     content: '';
     position: absolute;
     height: 20px;
@@ -688,7 +692,7 @@ nav.menu .dropdown-content::after {
     border-top: 2px solid rgb(255 255 255 / 0.2); */
 }
 
-nav.menu .dropdown-content::before {
+#main-menu.menu .dropdown-content::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -698,34 +702,34 @@ nav.menu .dropdown-content::before {
     z-index: -2;
 }
 
-nav.menu .dropdown:hover .dropdown-content {
+#main-menu.menu .dropdown:hover .dropdown-content {
     display: flex;
 }
 
-nav.menu .dropdown-content .active::after {
+#main-menu.menu .dropdown-content .active::after {
     display: none;
 }
 
-nav.menu .dropdown-content .active {
+#main-menu.menu .dropdown-content .active {
     color: rgb(168 128 255 / 1);
 }
 
-nav.menu .dropdown-content ul {
+#main-menu.menu .dropdown-content ul {
     width: max-content;
     margin-bottom: 0;
 }
 
-nav.menu .dropdown-content ul li {
+#main-menu.menu .dropdown-content ul li {
     display: block;
     padding: 16px 0;
     border-bottom: 1px solid rgb( 255 255 255 / 0.2);
 }
 
-nav.menu .dropdown-content ul li:last-child {
+#main-menu.menu .dropdown-content ul li:last-child {
     border: none;
 }
 
-nav.menu .dropdown-content li a {
+#main-menu.menu .dropdown-content li a {
     font-size: 1.4rem;
     line-height: 1.4;
     padding: 0rem 0.6rem;
@@ -773,18 +777,22 @@ nav.menu.sticky .dropdown-content li a {
         flex-direction: column;
         background: rgb(0 0 0 / 1.0);
         height: 100vh;
-        width: 60vw;
+        width: 80vw;
         right: -100%;
         top: -20px;
         padding: 40px;
-        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: scroll;
         transition: 0.5s ease all;
     }
     #mobile-menu .main-menu li {
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 14px;
+        padding-bottom: 14px;
         font-weight: 600;
         position: relative;
+        width: 100%;
+    }
+    #mobile-menu.menu div {
         width: 100%;
     }
     #mobile-menu .main-menu li::after {
@@ -796,6 +804,20 @@ nav.menu.sticky .dropdown-content li a {
         height: 1px;
         background: rgb(255 255 255 / 0.1);
     }
+    #mobile-menu.menu .dropdown-content li {
+        padding: 4px 0;
+        margin-left: 14px;
+    }
+    #mobile-menu .main-menu .dropdown-content li::after {
+        content: "";
+        position: relative;
+        bottom: 0;
+        left: 0px;
+        width: 0;
+        height: 0px;
+        background: none;
+        display: none;
+    }
     #mobile-menu .active::after {
         bottom: 0px;
         left: -16px;
@@ -805,6 +827,9 @@ nav.menu.sticky .dropdown-content li a {
     }
     #mobile-menu #hamburger.open+.main-menu {
         right: -40px;
+    }
+    #mobile-menu .switch {
+        margin-top: 20px;
     }
     /* ------------------------------------------------- Hamburger Toggle ------------------------------------------------- */
     #hamburger {
@@ -1875,8 +1900,9 @@ form textarea {
 
 .post-content p+ul li,
 .post-content ul>ul {
-    margin: 10px 0 0 30px;
+    margin: 14px 0 0 24px;
     list-style-type: circle;
+    line-height: 1.3;
 }
 
 .post-content ul+p {
@@ -1917,6 +1943,7 @@ form textarea {
 .sub-heading {
     font-weight: 600;
     margin-top: 40px;
+    font-size: 2.3rem;
 }
 
 
@@ -2185,6 +2212,7 @@ a .night #testimonial-content p,
     }
     #story-content p {
         min-height: 100%;
+        padding: 80px 40px 60px 40px;
     }
     .story-box::after,
     .story-box:nth-child(odd)::after {
@@ -2262,6 +2290,9 @@ a .night #testimonial-content p,
     .logoList span:nth-child(2n+1) {
         top: 30px;
     }
+    .logoList::after {
+        background: radial-gradient(circle, rgb( 255 255 255/ 0) 0%, rgb(255 255 255/ 1) 120%);
+    }
     /* -- Logos -- */
     .logos {
         grid-template-columns: repeat( 2, 1fr);
@@ -2292,10 +2323,13 @@ a .night #testimonial-content p,
 
 @media only screen and (max-width: 700px) {
     .section.bottom {
-        margin-bottom: 15%;
+        margin-bottom: 75px;
     }
     .section.top {
-        margin-top: 15%;
+        margin-top: 75px;
+    }
+    .section {
+        margin: 0 1%;
     }
     .hide-mobile {
         display: none;
@@ -2310,6 +2344,10 @@ a .night #testimonial-content p,
     }
     .web-apps .websites-hover a {
         margin-top: 8px;
+    }
+    video.shadowed-box,
+    iframe.shadowed-box {
+        padding: 10px;
     }
 }
 
@@ -2330,18 +2368,14 @@ a .night #testimonial-content p,
         max-width: 450px;
     }
     .landing {
-        background-position: 55% center;
+        background-position: 50% center;
     }
     section.sub-landing h1 {
         text-align: center;
     }
-    /* -- Qr code -- */
-    .form-container {
-        padding: 0px;
-    }
     /* -- Testimonials -- */
     #testimonial-content p {
-        padding: 60px 50px;
+        padding: 60px 40px;
     }
     /* -- Logos -- */
     .logos {
@@ -2388,7 +2422,7 @@ a .night #testimonial-content p,
         top: 0px;
     }
     .logoList span:nth-child(3n+2) {
-        top: -30px;
+        top: -20px;
     }
     .logoList span:nth-child(n+13) {
         display: none;

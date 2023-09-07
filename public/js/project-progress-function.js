@@ -35,7 +35,6 @@ function populatePage() {
         let projectContent = document.querySelector('#' + deliverable + ' .projectContent')
 
         let status = queryString[deliverable][`${deliverable}_status`];
-        console.log(status)
         let date = queryString[deliverable][`${deliverable}_date`];
         let notes = queryString[deliverable][`${deliverable}_notes`];
 

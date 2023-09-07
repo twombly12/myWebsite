@@ -128,6 +128,10 @@ app.get("/jbc-video", (request, response) => {
     response.sendFile(__dirname + "/public/jbc-video.html");
 });
 
+app.get("/intake-form", (request, response) => {
+    response.sendFile(__dirname + "/public/intake-form.html");
+});
+
 /* -------------------------- Contact Form -------------------------- */
 app.post('/', (req, res) => {
     console.log(req.body);
@@ -158,6 +162,11 @@ app.post('/', (req, res) => {
         }
     })
 })
+
+/* -------------------------- 404 -------------------------- */
+app.use((request, response, next) => {
+    response.status(404).sendFile(__dirname + "/public/404.html");
+});
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`)

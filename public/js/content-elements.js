@@ -7,6 +7,7 @@ function head() {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" type="image/x-icon" href="/assets/dash favicon.png">
     `
 }
 const menuLinks = {
@@ -116,7 +117,7 @@ function footer() {
                     </ul>
                 </div>
                 <div>
-                    <a class="button  color" href="">Get in touch</a>
+                    <a class="button  color" href="/contact">Get in touch</a>
                 </div>
             </div>
             <div id="copyright">
